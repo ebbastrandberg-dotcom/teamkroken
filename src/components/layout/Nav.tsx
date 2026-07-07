@@ -102,7 +102,7 @@ export function Nav() {
         </div>
       </div>
     </nav>
-    <div aria-hidden="true" className="h-[65px]" />
+    <div aria-hidden="true" className="h-[var(--nav-height)]" />
     </>
   );
 }

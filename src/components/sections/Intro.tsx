@@ -37,7 +37,7 @@ function SectionBlock({
 
 export function Intro() {
   return (
-    <Section tone="base">
+    <Section id="about" tone="base">
       <div className="mx-auto max-w-6xl">
         <Reveal>
           <div className="grid gap-10 lg:grid-cols-3 lg:gap-8 xl:gap-12">

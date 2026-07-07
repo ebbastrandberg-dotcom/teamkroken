@@ -11,7 +11,7 @@ export function Hero() {
   const config = themes[theme];
 
   return (
-    <section className="relative h-[min(70vh,520px)] overflow-hidden">
+    <section className="relative min-h-[calc(100svh-var(--nav-height))] overflow-hidden">
       <Image
         src={config.heroImage}
         alt="Team Kroken racing on the water"
@@ -24,10 +24,10 @@ export function Hero() {
       <div
         className="absolute inset-0"
         style={{
-          background: `linear-gradient(175deg, var(--color-hero-overlay-start) 0%, var(--color-hero-overlay-end) 100%)`,
+          background: `linear-gradient(175deg, var(--color-hero-overlay-start) 0%, var(--color-hero-overlay-end) 72%, var(--color-bg) 100%)`,
         }}
       />
-      <div className="relative flex h-full flex-col items-center justify-center px-4 text-center sm:px-6">
+      <div className="relative flex min-h-[calc(100svh-var(--nav-height))] flex-col items-center justify-center px-4 pb-16 text-center sm:px-6">
         <OrnamentalRule className="mb-3.5" />
         <p className="mb-3 max-w-xs text-[10px] tracking-[3px] text-[var(--color-brass)] uppercase sm:max-w-none sm:text-[11px] sm:tracking-[5px]">
           Gamla Stan Yacht Club · Sweden
@@ -56,6 +56,15 @@ export function Hero() {
           <StaggerWords text={worldChampionship.subtitle} delay={0.65} />
         </a>
       </div>
+
+      <a
+        href="#about"
+        aria-label="Scroll to content"
+        className="absolute bottom-6 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 text-[var(--color-brass)]/70 transition-opacity hover:text-[var(--color-brass)]"
+      >
+        <span className="text-[10px] tracking-[2.5px] uppercase">Explore</span>
+        <span className="block h-7 w-px animate-pulse bg-current" />
+      </a>
     </section>
   );
 }

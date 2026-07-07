@@ -4,7 +4,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+  scroll-padding-top: var(--nav-height);
 }
 
 body {
@@ -15,4 +15,8 @@ body {
   line-height: 1.65;
   overflow-x: clip;
   -webkit-text-size-adjust: 100%;
+}
+
+:root {
+  --nav-height: 65px;
 }
