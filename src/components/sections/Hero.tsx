@@ -41,7 +41,10 @@ export function Hero() {
           Kroken
         </h1>
         <OrnamentalRule className="mt-3.5 mb-2.5" />
-        <p className="max-w-md px-2 text-[11px] leading-[1.6] tracking-[2px] text-[var(--color-event-label)] uppercase sm:text-[12px] sm:tracking-[3px]">
+        <p
+          className="max-w-md px-2 text-[12px] leading-[1.6] tracking-[2px] text-[var(--color-sail)] uppercase sm:text-[13px] sm:tracking-[3px]"
+          style={{ textShadow: "0 2px 16px var(--color-hero-shadow)" }}
+        >
           <StaggerWords text={worldChampionship.title} delay={0.35} />
         </p>
         <a

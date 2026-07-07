@@ -1,5 +1,4 @@
 import { Reveal } from "@/components/motion/Reveal";
-import { TeamStats } from "@/components/sections/TeamStats";
 import {
   championshipStory,
   teamRacingStory,
@@ -9,20 +8,27 @@ import {
 function SectionBlock({
   label,
   heading,
+  subheading,
   children,
 }: {
   label: string;
   heading: string;
+  subheading?: string;
   children: React.ReactNode;
 }) {
   return (
-    <div>
+    <div className="h-full">
       <p className="mb-3 text-[11px] tracking-[2.5px] text-[var(--color-brass)] uppercase">
         {label}
       </p>
-      <h2 className="text-[clamp(24px,6vw,30px)] leading-none font-light tracking-[1px] text-[var(--color-sail)]">
+      <h2 className="text-[clamp(22px,2.5vw,28px)] leading-[1.05] font-light tracking-[1px] text-[var(--color-sail)]">
         {heading}
       </h2>
+      {subheading ? (
+        <p className="mt-1 text-[14px] tracking-[0.5px] text-[var(--color-text-subtle)] italic">
+          {subheading}
+        </p>
+      ) : null}
       <div className="mt-5 space-y-4">{children}</div>
     </div>
   );
@@ -31,21 +37,14 @@ function SectionBlock({
 export function Intro() {
   return (
     <section className="border-b border-[var(--color-border-subtle)] px-4 py-10 sm:px-6 sm:py-12">
-      <div className="mx-auto max-w-5xl space-y-14">
+      <div className="mx-auto max-w-6xl">
         <Reveal>
-          <div className="grid gap-10 md:grid-cols-2 md:gap-14">
-            <div>
-              <p className="mb-3 text-[11px] tracking-[2.5px] text-[var(--color-brass)] uppercase">
-                The team
-              </p>
-              <h2 className="text-[clamp(24px,6vw,30px)] leading-none font-light tracking-[1px] text-[var(--color-sail)]">
-                {teamStory.heading}
-              </h2>
-              <p className="mt-1 text-[15px] tracking-[0.5px] text-[var(--color-text-subtle)] italic">
-                {teamStory.subheading}
-              </p>
-            </div>
-            <div className="space-y-4">
+          <div className="grid gap-10 lg:grid-cols-3 lg:gap-8 xl:gap-12">
+            <SectionBlock
+              label="The team"
+              heading={teamStory.heading}
+              subheading={teamStory.subheading}
+            >
               {teamStory.body.map((paragraph) => (
                 <p
                   key={paragraph.slice(0, 40)}
@@ -54,12 +53,8 @@ export function Intro() {
                   {paragraph}
                 </p>
               ))}
-            </div>
-          </div>
-        </Reveal>
+            </SectionBlock>
 
-        <Reveal delay={0.08}>
-          <div className="grid gap-10 md:grid-cols-2 md:gap-14">
             <SectionBlock label="The event" heading={championshipStory.heading}>
               {championshipStory.body.map((paragraph) => (
                 <p
@@ -83,8 +78,6 @@ export function Intro() {
             </SectionBlock>
           </div>
         </Reveal>
-
-        <TeamStats />
       </div>
     </section>
   );

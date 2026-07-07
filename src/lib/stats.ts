@@ -1,10 +1,3 @@
-export const teamStats = [
-  { label: "Swedish championships won", value: 4 },
-  { label: "Teams at the World Championship", value: 12 },
-  { label: "Sailors per racing team", value: 8 },
-  { label: "International regattas per year", value: 2 },
-];
-
 export const seasonMilestones = [
   {
     date: "May 2–3, 2026",

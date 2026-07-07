@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Team Kroken">
+  <rect width="32" height="32" fill="#071430" />
+  <circle
+    cx="16"
+    cy="16"
+    r="13.5"
+    fill="none"
+    stroke="#d4aa28"
+    stroke-width="0.9"
+  />
+  <text
+    x="16"
+    y="21"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="12"
+    font-weight="600"
+    fill="#d4aa28"
+    text-anchor="middle"
+  >
+    TK
+  </text>
+</svg>

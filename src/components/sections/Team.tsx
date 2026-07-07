@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Reveal } from "@/components/motion/Reveal";
+import { TeamGallery } from "@/components/sections/TeamGallery";
 import { teamGroupPhoto, teamMembers } from "@/lib/team";
 
 function MemberPhoto({
@@ -96,6 +97,10 @@ export function Team() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal delay={0.1}>
+          <TeamGallery />
+        </Reveal>
       </div>
     </section>
   );
