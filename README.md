@@ -14,8 +14,10 @@ Open [http://localhost:3000](http://localhost:3000).
 ## Deploy on Vercel
 
 1. Import [github.com/ebbastrandberg-dotcom/teamkroken](https://github.com/ebbastrandberg-dotcom/teamkroken) in [Vercel](https://vercel.com/new)
-2. Leave **Root Directory** empty (app is at repo root)
-3. Deploy — Vercel auto-detects Next.js
+2. In **Project Settings → General → Root Directory**, leave it **empty** (do not use `web`)
+3. Redeploy from the **Deployments** tab
+
+If a deployment shows **Error**, check that Root Directory is blank — the app now lives at the repo root, not in `web/`.
 
 ## Design handoff
 
