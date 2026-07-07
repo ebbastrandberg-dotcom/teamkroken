@@ -1,9 +1,10 @@
 @import "tailwindcss";
 @import "../styles/colors.css";
+@import "../styles/glass.css";
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -12,6 +13,6 @@ body {
   font-family: var(--font-cormorant), Georgia, serif;
   font-size: 16px;
   line-height: 1.65;
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-text-size-adjust: 100%;
 }

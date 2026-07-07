@@ -54,7 +54,7 @@ export function TeamGallery() {
         Racing gallery
       </h3>
 
-      <figure className="overflow-hidden border border-[var(--color-card-border)]">
+      <figure className="glass overflow-hidden">
         <div className="relative aspect-[16/9] w-full bg-[var(--color-bg)]">
           <AnimatePresence mode="wait">
             <motion.div
@@ -82,7 +82,7 @@ export function TeamGallery() {
                 type="button"
                 onClick={goPrev}
                 aria-label="Previous photo"
-                className="absolute top-1/2 left-3 z-10 -translate-y-1/2 border border-[var(--color-ghost-border)] bg-[var(--color-bg)]/80 px-2.5 py-2 text-[18px] leading-none text-[var(--color-brass)] transition-opacity hover:opacity-80"
+                className="glass absolute top-1/2 left-3 z-10 -translate-y-1/2 px-2.5 py-2 text-[18px] leading-none text-[var(--color-brass)] transition-opacity hover:opacity-80"
               >
                 ‹
               </button>
@@ -90,7 +90,7 @@ export function TeamGallery() {
                 type="button"
                 onClick={goNext}
                 aria-label="Next photo"
-                className="absolute top-1/2 right-3 z-10 -translate-y-1/2 border border-[var(--color-ghost-border)] bg-[var(--color-bg)]/80 px-2.5 py-2 text-[18px] leading-none text-[var(--color-brass)] transition-opacity hover:opacity-80"
+                className="glass absolute top-1/2 right-3 z-10 -translate-y-1/2 px-2.5 py-2 text-[18px] leading-none text-[var(--color-brass)] transition-opacity hover:opacity-80"
               >
                 ›
               </button>

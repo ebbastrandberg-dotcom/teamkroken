@@ -52,7 +52,7 @@ export function Team() {
         </Reveal>
 
         <Reveal delay={0.08}>
-          <figure className="mb-10 overflow-hidden border border-[var(--color-card-border)]">
+          <figure className="glass mb-10 overflow-hidden">
             <div className="relative aspect-[16/9] w-full">
               <MemberPhoto
                 name="Team Kroken celebrating with trophy"
@@ -70,7 +70,7 @@ export function Team() {
         <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
           {teamMembers.map((member, index) => (
             <Reveal key={member.name} delay={index * 0.05} className="h-full">
-              <article className="flex h-full flex-col border border-[var(--color-card-border)]">
+              <article className="glass flex h-full flex-col overflow-hidden">
                 <div className="relative aspect-[4/5] overflow-hidden">
                   <MemberPhoto
                     name={member.name}

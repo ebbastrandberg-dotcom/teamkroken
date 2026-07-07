@@ -12,7 +12,7 @@ export function TierCard({ children }: TierCardProps) {
 
   if (reduceMotion) {
     return (
-      <article className="border border-[var(--color-card-border)] p-3.5">
+      <article className="glass p-3.5">
         {children}
       </article>
     );
@@ -20,7 +20,7 @@ export function TierCard({ children }: TierCardProps) {
 
   return (
     <motion.article
-      className="border border-[var(--color-card-border)] p-3.5"
+      className="glass p-3.5"
       whileHover={{ y: -2 }}
       transition={{ duration: 0.2, ease: "easeOut" }}
     >

@@ -13,7 +13,7 @@ export function ThemeSwitcher() {
       <button
         type="button"
         onClick={() => setOpen((current) => !current)}
-        className="rounded border border-[var(--color-card-border)] bg-[var(--color-bg)]/95 px-3 py-2 text-[11px] tracking-[2px] text-[var(--color-brass)] uppercase shadow-lg backdrop-blur-sm md:hidden"
+        className="glass rounded px-3 py-2 text-[11px] tracking-[2px] text-[var(--color-brass)] uppercase md:hidden"
         aria-expanded={open}
         aria-label="Toggle theme selector"
       >
@@ -21,7 +21,7 @@ export function ThemeSwitcher() {
       </button>
 
       <div
-        className={`mt-2 flex max-w-[calc(100vw-1.5rem)] flex-col gap-2 rounded border border-[var(--color-card-border)] bg-[var(--color-bg)]/95 p-3 shadow-lg backdrop-blur-sm ${open ? "flex" : "hidden"} md:mt-0 md:flex md:max-w-none`}
+        className={`glass mt-2 flex max-w-[calc(100vw-1.5rem)] flex-col gap-2 rounded p-3 ${open ? "flex" : "hidden"} md:mt-0 md:flex md:max-w-none`}
         role="group"
         aria-label="Theme selector"
       >
@@ -36,10 +36,10 @@ export function ThemeSwitcher() {
               type="button"
               onClick={() => setTheme(id)}
               aria-pressed={active}
-              className={`cursor-pointer border px-3 py-2 text-left transition-colors ${
+              className={`cursor-pointer px-3 py-2 text-left transition-all ${
                 active
-                  ? "border-[var(--color-brass)] bg-[var(--color-brass)]/10"
-                  : "border-[var(--color-border)] hover:border-[var(--color-brass)]/50"
+                  ? "glass glass-strong border-[var(--color-brass)]"
+                  : "glass hover:border-[var(--color-brass)]/50"
               }`}
             >
               <span className="block text-[12px] tracking-[1px] text-[var(--color-sail)]">

@@ -23,6 +23,7 @@
   --color-card-border: var(--color-card-border);
   --color-ghost-border: var(--color-ghost-border);
   --color-btn-text: var(--color-btn-text);
+  --glass-blur: var(--glass-blur);
   --font-serif: var(--font-cormorant);
 }
 
@@ -56,6 +57,13 @@
   --color-hero-overlay-start: rgba(9, 30, 72, 0.38);
   --color-hero-overlay-end: rgba(9, 30, 72, 0.72);
   --color-btn-text: var(--palette-navy);
+  --glass-blur: 16px;
+  --glass-bg: rgba(7, 20, 48, 0.52);
+  --glass-bg-strong: rgba(7, 20, 48, 0.82);
+  --glass-border: rgba(244, 236, 218, 0.16);
+  --glass-highlight: rgba(244, 236, 218, 0.1);
+  --glass-shadow: 0 8px 32px rgba(7, 20, 48, 0.28);
+  --glass-shadow-strong: 0 12px 40px rgba(7, 20, 48, 0.42);
 }
 
 /* ── 3b — Silver Sea ────────────────────────────────────────── */
@@ -87,4 +95,11 @@
   --color-hero-overlay-start: rgba(20, 30, 40, 0.3);
   --color-hero-overlay-end: rgba(20, 30, 40, 0.68);
   --color-btn-text: var(--palette-storm);
+  --glass-blur: 16px;
+  --glass-bg: rgba(20, 30, 40, 0.55);
+  --glass-bg-strong: rgba(20, 30, 40, 0.84);
+  --glass-border: rgba(236, 228, 212, 0.14);
+  --glass-highlight: rgba(236, 228, 212, 0.08);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.32);
+  --glass-shadow-strong: 0 12px 40px rgba(0, 0, 0, 0.45);
 }

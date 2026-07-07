@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { LogoMark } from "@/components/ui/LogoMark";
 
 const navLinks = [
@@ -12,9 +12,25 @@ const navLinks = [
 
 export function Nav() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 12);
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <nav className="border-b border-[var(--color-border)] bg-[var(--color-bg)]">
+    <>
+      <nav
+        className={`fixed inset-x-0 top-0 z-50 border-b border-[var(--glass-border)] transition-[box-shadow,background-color] duration-300 glass ${
+          scrolled ? "glass-strong" : ""
+        }`}
+      >
       <div className="flex min-h-[64px] items-center justify-between px-4 py-3 sm:px-6">
         <div className="flex min-w-0 items-center gap-[11px]">
           <LogoMark />
@@ -86,5 +102,7 @@ export function Nav() {
         </div>
       </div>
     </nav>
+    <div aria-hidden="true" className="h-[65px]" />
+    </>
   );
 }

@@ -24,7 +24,7 @@ export function Button({
     primary:
       "border-none bg-[var(--color-brass)] text-[var(--color-btn-text)] hover:brightness-110",
     secondary:
-      "border border-[var(--color-ghost-border)] bg-transparent text-[var(--color-brass)] hover:brightness-110",
+      "glass border-[var(--color-ghost-border)] text-[var(--color-brass)] hover:brightness-110",
   };
 
   const classes = `${base} ${variants[variant]} ${className}`;

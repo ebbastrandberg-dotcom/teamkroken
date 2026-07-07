@@ -1,0 +1,21 @@
+.glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow), inset 0 1px 0 var(--glass-highlight);
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  backdrop-filter: blur(var(--glass-blur));
+}
+
+.glass-strong {
+  background: var(--glass-bg-strong);
+  box-shadow: var(--glass-shadow-strong), inset 0 1px 0 var(--glass-highlight);
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .glass,
+  .glass-strong {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background: var(--color-bg);
+  }
+}

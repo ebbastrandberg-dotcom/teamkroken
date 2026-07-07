@@ -8,7 +8,7 @@ export function ContactCta() {
   return (
     <Section id="contact" tone="base" className="py-12 sm:py-16">
       <Reveal>
-        <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
+        <div className="glass mx-auto flex max-w-2xl flex-col items-center p-8 text-center sm:p-10">
           <OrnamentalRule className="mb-4" />
           <p className="mb-3 text-[11px] tracking-[2.5px] text-[var(--color-brass)] uppercase">
             Join us on the water
