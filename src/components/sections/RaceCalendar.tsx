@@ -1,18 +1,6 @@
 import { Reveal } from "@/components/motion/Reveal";
 import { Section } from "@/components/ui/Section";
-import { worldChampionship } from "@/lib/event";
-
-const events = [
-  { date: "12–14 Jun", name: "Scandinavian Open", location: "Sandhamn, Sweden" },
-  { date: "4–6 Jul", name: "Baltic Cup", location: "Mariehamn, Åland" },
-  {
-    date: "12–16 Aug",
-    name: worldChampionship.title,
-    location: `${worldChampionship.location}, Sweden`,
-    url: worldChampionship.url,
-  },
-  { date: "5–7 Sep", name: "Stockholm Archipelago Race", location: "Stockholm, Sweden" },
-];
+import { seasonEvents } from "@/lib/calendar";
 
 export function RaceCalendar() {
   return (
@@ -27,7 +15,7 @@ export function RaceCalendar() {
           </h2>
         </Reveal>
         <ul className="divide-y divide-[var(--color-border-subtle)]">
-          {events.map((event, index) => (
+          {seasonEvents.map((event, index) => (
             <li
               key={event.name}
               className="flex flex-col gap-1 py-4 sm:flex-row sm:items-baseline sm:justify-between"

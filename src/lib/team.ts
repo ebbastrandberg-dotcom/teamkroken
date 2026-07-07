@@ -52,6 +52,48 @@ export const teamGalleryPhotos: TeamGalleryPhoto[] = [
     alt: "Team Kroken squad gathered on the pier",
     caption: "Team Kroken · Gamla Stan Yacht Club",
   },
+  {
+    src: "/team/gallery/trwc-racing-fleet.png",
+    alt: "Team racing fleet at the Team Racing World Championship",
+    caption: "Team Racing World Championship · Fleet racing",
+  },
+  {
+    src: "/team/gallery/trwc-racing-action.png",
+    alt: "Team Kroken boat racing through chop at a world championship",
+    caption: "Team Racing World Championship · On the water",
+  },
+  {
+    src: "/team/gallery/trwc-regatta-start.png",
+    alt: "Multiple teams racing at the Team Racing World Championship",
+    caption: "Team Racing World Championship · Regatta",
+  },
+  {
+    src: "/team/gallery/team-racing-crew.png",
+    alt: "Team Kroken crew hiking on the rail in Gamla Stan Yacht Club vests",
+    caption: "Team Kroken · Gamla Stan Yacht Club",
+  },
+  {
+    src: "/team/gallery/team-kroken-group.png",
+    alt: "Team Kroken squad in team jackets on the dock",
+    caption: "Team Kroken · Team photo",
+  },
+  {
+    src: "/team/gallery/team-championship-group.png",
+    alt: "Team Kroken and squad in blazers at a championship venue",
+    caption: "Team Kroken · Championship",
+  },
+  {
+    src: "/team/gallery/team-blazers.png",
+    alt: "Team Kroken members in club blazers at a championship",
+    caption: "Team Kroken · Gamla Stan Yacht Club",
+    fit: "contain",
+  },
+  {
+    src: "/team/gallery/team-dock.png",
+    alt: "Team Kroken members on the dock between races",
+    caption: "Team Kroken · Between races",
+    fit: "contain",
+  },
 ];
 
 export const teamMembers: TeamMember[] = [
