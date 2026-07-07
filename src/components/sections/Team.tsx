@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Reveal } from "@/components/motion/Reveal";
 import { TeamGallery } from "@/components/sections/TeamGallery";
+import { Section } from "@/components/ui/Section";
 import { teamGroupPhoto, teamMembers } from "@/lib/team";
 
 function MemberPhoto({
@@ -39,7 +40,7 @@ function MemberPhoto({
 
 export function Team() {
   return (
-    <section id="team" className="px-4 py-10 sm:px-6 sm:py-12">
+    <Section id="team" tone="base">
       <div className="mx-auto max-w-5xl">
         <Reveal>
           <p className="mb-3 text-[11px] tracking-[2.5px] text-[var(--color-brass)] uppercase">
@@ -102,6 +103,6 @@ export function Team() {
           <TeamGallery />
         </Reveal>
       </div>
-    </section>
+    </Section>
   );
 }

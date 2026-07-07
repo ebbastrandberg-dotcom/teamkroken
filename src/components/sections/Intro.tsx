@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/motion/Reveal";
+import { Section } from "@/components/ui/Section";
 import {
   championshipStory,
   teamRacingStory,
@@ -36,7 +37,7 @@ function SectionBlock({
 
 export function Intro() {
   return (
-    <section className="border-b border-[var(--color-border-subtle)] px-4 py-10 sm:px-6 sm:py-12">
+    <Section tone="base">
       <div className="mx-auto max-w-6xl">
         <Reveal>
           <div className="grid gap-10 lg:grid-cols-3 lg:gap-8 xl:gap-12">
@@ -79,6 +80,6 @@ export function Intro() {
           </div>
         </Reveal>
       </div>
-    </section>
+    </Section>
   );
 }

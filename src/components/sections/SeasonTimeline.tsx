@@ -1,12 +1,10 @@
 import { Reveal } from "@/components/motion/Reveal";
+import { Section } from "@/components/ui/Section";
 import { seasonMilestones } from "@/lib/stats";
 
 export function SeasonTimeline() {
   return (
-    <section
-      className="border-y border-[var(--color-border-subtle)] px-4 py-10 sm:px-6 sm:py-12"
-      aria-label="Road to Stockholm"
-    >
+    <Section tone="muted" aria-label="Road to Stockholm">
       <div className="mx-auto max-w-5xl">
         <Reveal>
           <p className="mb-3 text-[11px] tracking-[2.5px] text-[var(--color-brass)] uppercase">
@@ -43,6 +41,6 @@ export function SeasonTimeline() {
           ))}
         </ol>
       </div>
-    </section>
+    </Section>
   );
 }

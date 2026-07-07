@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/motion/Reveal";
+import { Section } from "@/components/ui/Section";
 import { worldChampionship } from "@/lib/event";
 
 const events = [
@@ -15,10 +16,7 @@ const events = [
 
 export function RaceCalendar() {
   return (
-    <section
-      id="calendar"
-      className="border-y border-[var(--color-border-subtle)] px-4 py-10 sm:px-6 sm:py-12"
-    >
+    <Section id="calendar" tone="muted">
       <div className="mx-auto max-w-5xl">
         <Reveal>
           <p className="mb-3 text-[11px] tracking-[2.5px] text-[var(--color-brass)] uppercase">
@@ -62,6 +60,6 @@ export function RaceCalendar() {
           ))}
         </ul>
       </div>
-    </section>
+    </Section>
   );
 }

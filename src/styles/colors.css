@@ -7,6 +7,7 @@
 
 @theme {
   --color-bg: var(--color-bg);
+  --color-section-muted: var(--color-section-muted);
   --color-accent: var(--color-accent);
   --color-brass: var(--color-brass);
   --color-sail: var(--color-sail);
@@ -36,6 +37,7 @@
   --palette-spray: #6aaedc;
 
   --color-bg: var(--palette-navy);
+  --color-section-muted: color-mix(in srgb, var(--palette-navy) 90%, var(--palette-cobalt) 10%);
   --color-accent: var(--palette-cobalt);
   --color-brass: var(--palette-brass);
   --color-sail: var(--palette-sail);
@@ -66,6 +68,7 @@
   --palette-spinnaker: #3a5028;
 
   --color-bg: var(--palette-storm);
+  --color-section-muted: color-mix(in srgb, var(--palette-storm) 92%, var(--palette-silver) 8%);
   --color-accent: var(--palette-silver);
   --color-brass: var(--palette-brass);
   --color-sail: var(--palette-sail);

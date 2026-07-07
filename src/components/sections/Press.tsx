@@ -1,9 +1,10 @@
 import { Reveal } from "@/components/motion/Reveal";
+import { Section } from "@/components/ui/Section";
 import { pressItems } from "@/lib/press";
 
 export function Press() {
   return (
-    <section id="press" className="border-y border-[var(--color-border-subtle)] px-4 py-10 sm:px-6 sm:py-12">
+    <Section id="press" tone="muted">
       <div className="mx-auto max-w-5xl">
         <Reveal>
           <p className="mb-3 text-[11px] tracking-[2.5px] text-[var(--color-brass)] uppercase">
@@ -35,6 +36,6 @@ export function Press() {
           ))}
         </ul>
       </div>
-    </section>
+    </Section>
   );
 }

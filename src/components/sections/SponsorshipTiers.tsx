@@ -1,13 +1,14 @@
 import { TierCard } from "@/components/motion/TierCard";
 import { Reveal } from "@/components/motion/Reveal";
 import { Button } from "@/components/ui/Button";
+import { Section } from "@/components/ui/Section";
 import { sponsorshipStory } from "@/lib/content";
 import { worldChampionship } from "@/lib/event";
 import { sponsorshipTiers } from "@/lib/sponsorship";
 
 export function SponsorshipTiers() {
   return (
-    <section id="sponsorship" className="px-4 py-10 sm:px-6 sm:py-12">
+    <Section id="sponsorship" tone="base">
       <div className="mx-auto max-w-5xl">
         <Reveal>
           <p className="mb-3 text-[11px] tracking-[2.5px] text-[var(--color-brass)] uppercase">
@@ -52,6 +53,6 @@ export function SponsorshipTiers() {
           </div>
         </Reveal>
       </div>
-    </section>
+    </Section>
   );
 }

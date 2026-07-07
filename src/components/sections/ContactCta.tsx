@@ -1,14 +1,12 @@
 import { Reveal } from "@/components/motion/Reveal";
 import { Button } from "@/components/ui/Button";
 import { OrnamentalRule } from "@/components/ui/OrnamentalRule";
+import { Section } from "@/components/ui/Section";
 import { worldChampionship } from "@/lib/event";
 
 export function ContactCta() {
   return (
-    <section
-      id="contact"
-      className="border-t border-[var(--color-border-subtle)] px-4 py-12 sm:px-6 sm:py-16"
-    >
+    <Section id="contact" tone="base" className="py-12 sm:py-16">
       <Reveal>
         <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
           <OrnamentalRule className="mb-4" />
@@ -35,6 +33,6 @@ export function ContactCta() {
           </p>
         </div>
       </Reveal>
-    </section>
+    </Section>
   );
 }
