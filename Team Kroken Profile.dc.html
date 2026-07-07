@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+  <meta name="design_doc_mode" content="canvas">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Bebas+Neue&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #cbc6bc; }
+    a, a:hover { color: inherit; text-decoration: none; }
+    .dv-turn { padding: 48px 48px 48px; border-bottom: 1px solid rgba(0,0,0,.08); scroll-margin-top: 16px; }
+    .dv-thd { display: flex; align-items: baseline; gap: 10px; margin: 0 0 24px; }
+    .dv-tid { font: 600 10px ui-monospace, Menlo, monospace; padding: 3px 7px; background: #1a1a1a; color: #fff; border-radius: 4px; text-decoration: none; }
+    .dv-tname { font: 500 13px/1.2 system-ui, sans-serif; color: #1a1a1a; }
+    .dv-opts { display: flex; flex-wrap: wrap; gap: 36px; align-items: flex-start; }
+    .dv-opt { flex: none; display: flex; flex-direction: column; gap: 8px; scroll-margin-top: 16px; }
+    .dv-oid { font: 600 10.5px ui-monospace, Menlo, monospace; padding: 3px 7px; background: rgba(0,0,0,.1); color: #1a1a1a; border-radius: 5px; text-decoration: none; }
+    .dv-olabel { display: flex; align-items: baseline; gap: 8px; font: 400 11px/1.3 system-ui, sans-serif; color: rgba(0,0,0,.5); }
+    .dv-card { max-width: 100%; border: 1px solid rgba(0,0,0,.12); border-radius: 10px; box-shadow: 0 6px 24px rgba(0,0,0,.14); overflow: hidden; }
+    .dv-opt:target .dv-oid { background: #2a78d6; color: #fff; }
+    .dv-next { margin: 28px 0 0; font: 12px/1.9 system-ui, sans-serif; color: rgba(0,0,0,.45); }
+    .dv-next a { color: inherit; }
+  </style>
+</helmet>
+
+<section class="dv-turn" id="t3">
+  <div class="dv-thd">
+    <a class="dv-tid" href="#t3">3</a>
+    <span class="dv-tname">Palettes pulled from the archive — Cormorant Garamond + real photos</span>
+  </div>
+  <div class="dv-opts">
+
+    <!-- 3a: Cobalt Water -->
+    <div class="dv-opt" id="3a">
+      <div class="dv-olabel"><a class="dv-oid" href="#3a">3a</a> Cobalt — deep ocean blue + cream sails</div>
+      <div class="dv-card" style="width:500px;background:#071430;font-family:'Cormorant Garamond',Georgia,serif;">
+
+        <!-- Nav -->
+        <div style="background:#071430;padding:13px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(200,168,75,0.2);">
+          <div style="display:flex;align-items:center;gap:11px;">
+            <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="13.5" fill="none" stroke="#c8a84b" stroke-width="0.8"/>
+              <text x="16" y="21" font-family="'Cormorant Garamond',serif" font-size="12" font-weight="600" fill="#c8a84b" text-anchor="middle">TK</text>
+            </svg>
+            <div>
+              <div style="font-size:11px;letter-spacing:3px;color:#c8a84b;text-transform:uppercase;line-height:1.1;">Team Kroken</div>
+              <div style="font-size:7.5px;letter-spacing:2px;color:rgba(200,168,75,0.5);text-transform:uppercase;">Gamla Stan Yacht Club</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:18px;align-items:center;">
+            <span style="font-size:9px;letter-spacing:2px;color:rgba(232,216,184,0.4);text-transform:uppercase;">Racing</span>
+            <span style="font-size:9px;letter-spacing:2px;color:rgba(232,216,184,0.4);text-transform:uppercase;">Team</span>
+            <span style="font-size:9px;letter-spacing:2px;color:#c8a84b;text-transform:uppercase;border-bottom:0.75px solid #c8a84b;padding-bottom:2px;">Sponsorship</span>
+          </div>
+        </div>
+
+        <!-- Hero — real photo -->
+        <div style="position:relative;height:286px;overflow:hidden;">
+          <img src="uploads/pasted-1783432618760-0.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%;">
+          <div style="position:absolute;inset:0;background:linear-gradient(175deg,rgba(9,30,72,0.38) 0%,rgba(9,30,72,0.72) 100%);"></div>
+          <div style="position:relative;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+            <svg width="240" height="14" viewBox="0 0 240 14" style="display:block;margin-bottom:14px" xmlns="http://www.w3.org/2000/svg">
+              <line x1="0" y1="7" x2="105" y2="7" stroke="#c8a84b" stroke-width="0.75"/>
+              <polygon points="120,3 116,7 120,11 124,7" fill="#c8a84b"/>
+              <line x1="135" y1="7" x2="240" y2="7" stroke="#c8a84b" stroke-width="0.75"/>
+            </svg>
+            <div style="font-size:8.5px;letter-spacing:5px;color:#c8a84b;text-transform:uppercase;margin-bottom:12px;">Gamla Stan Yacht Club · Sweden</div>
+            <div style="font-size:54px;letter-spacing:7px;color:#f4ecda;font-weight:300;line-height:0.92;text-transform:uppercase;text-align:center;text-shadow:0 2px 24px rgba(7,20,48,0.55);">Team<br>Kroken</div>
+            <svg width="240" height="14" viewBox="0 0 240 14" style="display:block;margin-top:14px;margin-bottom:10px" xmlns="http://www.w3.org/2000/svg">
+              <line x1="0" y1="7" x2="105" y2="7" stroke="#c8a84b" stroke-width="0.75"/>
+              <polygon points="120,3 116,7 120,11 124,7" fill="#c8a84b"/>
+              <line x1="135" y1="7" x2="240" y2="7" stroke="#c8a84b" stroke-width="0.75"/>
+            </svg>
+            <div style="font-size:8px;letter-spacing:4px;color:rgba(200,168,75,0.7);text-transform:uppercase;">J/24 World Championship 2025</div>
+          </div>
+        </div>
+
+        <!-- Colours extracted from photo -->
+        <div style="padding:16px 22px;border-top:1px solid rgba(200,168,75,0.14);border-bottom:1px solid rgba(200,168,75,0.14);">
+          <div style="font-size:7.5px;letter-spacing:2.5px;color:#d4aa28;text-transform:uppercase;margin-bottom:10px;">Colour System — from the archive</div>
+          <div style="display:flex;gap:8px;">
+            <div style="flex:1;"><div style="height:28px;background:#071430;border:1px solid rgba(255,255,255,0.12);border-radius:3px;"></div><div style="font-size:7.5px;color:rgba(244,236,218,0.5);margin-top:4px;font-family:ui-monospace,monospace;">#071430</div><div style="font-size:7.5px;color:rgba(244,236,218,0.35);">Deep Navy</div></div>
+            <div style="flex:1;"><div style="height:28px;background:#1a4db8;border-radius:3px;"></div><div style="font-size:7.5px;color:rgba(244,236,218,0.5);margin-top:4px;font-family:ui-monospace,monospace;">#1A4DB8</div><div style="font-size:7.5px;color:rgba(244,236,218,0.35);">Cobalt</div></div>
+            <div style="flex:1;"><div style="height:28px;background:#d4aa28;border-radius:3px;"></div><div style="font-size:7.5px;color:rgba(244,236,218,0.5);margin-top:4px;font-family:ui-monospace,monospace;">#D4AA28</div><div style="font-size:7.5px;color:rgba(244,236,218,0.35);">Brass</div></div>
+            <div style="flex:1;"><div style="height:28px;background:#f4ecda;border-radius:3px;"></div><div style="font-size:7.5px;color:rgba(244,236,218,0.5);margin-top:4px;font-family:ui-monospace,monospace;">#F4ECDA</div><div style="font-size:7.5px;color:rgba(244,236,218,0.35);">Sail</div></div>
+            <div style="flex:1;"><div style="height:28px;background:#6aaedc;border-radius:3px;"></div><div style="font-size:7.5px;color:rgba(244,236,218,0.5);margin-top:4px;font-family:ui-monospace,monospace;">#6AAEDC</div><div style="font-size:7.5px;color:rgba(244,236,218,0.35);">Spray</div></div>
+          </div>
+        </div>
+
+        <!-- Typography -->
+        <div style="padding:16px 22px;border-bottom:1px solid rgba(200,168,75,0.14);">
+          <div style="font-size:7.5px;letter-spacing:2.5px;color:#d4aa28;text-transform:uppercase;margin-bottom:10px;">Typography — Cormorant Garamond</div>
+          <div style="font-size:30px;font-weight:300;color:#f4ecda;letter-spacing:1px;line-height:1;">Racing since 1987</div>
+          <div style="font-size:11px;font-style:italic;color:rgba(244,236,218,0.65);margin-top:3px;">Gamla Stan Yacht Club, Stockholm</div>
+          <div style="font-size:10px;color:rgba(244,236,218,0.6);margin-top:8px;line-height:1.65;">We compete with purpose — representing the finest tradition of Swedish offshore racing. Our crew of eight brings world-class experience to every start line.</div>
+          <div style="display:flex;gap:14px;margin-top:10px;align-items:baseline;">
+            <span style="font-size:26px;font-weight:600;color:#f4ecda;">Aa</span>
+            <span style="font-size:18px;font-weight:300;color:rgba(244,236,218,0.7);">Aa</span>
+            <span style="font-size:13px;font-style:italic;color:rgba(244,236,218,0.5);">Aa</span>
+            <span style="font-size:8.5px;letter-spacing:4px;text-transform:uppercase;color:#d4aa28;">SMALL CAPS</span>
+          </div>
+        </div>
+
+        <!-- Components -->
+        <div style="padding:16px 22px;">
+          <div style="font-size:7.5px;letter-spacing:2.5px;color:#d4aa28;text-transform:uppercase;margin-bottom:12px;">UI Components</div>
+          <div style="display:flex;gap:10px;margin-bottom:14px;">
+            <button style="background:#d4aa28;color:#071430;border:none;padding:9px 20px;font-family:'Cormorant Garamond',serif;font-size:9.5px;letter-spacing:3px;text-transform:uppercase;cursor:pointer;font-weight:600;">Become a Partner</button>
+            <button style="background:transparent;color:#d4aa28;border:1px solid rgba(212,170,40,0.65);padding:9px 20px;font-family:'Cormorant Garamond',serif;font-size:9.5px;letter-spacing:3px;text-transform:uppercase;cursor:pointer;">Learn More</button>
+          </div>
+          <div style="border:1px solid rgba(212,170,40,0.32);padding:14px;">
+            <div style="font-size:7px;letter-spacing:3px;color:#d4aa28;text-transform:uppercase;margin-bottom:5px;">Platinum Partner</div>
+            <div style="font-size:17px;font-weight:400;color:#f4ecda;letter-spacing:0.5px;">Championship Sponsorship</div>
+            <div style="font-size:9.5px;color:rgba(244,236,218,0.55);margin-top:6px;line-height:1.6;">Visibility across 14 race days · Official partner status · VIP regatta access</div>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /3a -->
+
+    <!-- 3b: Silver Sea -->
+    <div class="dv-opt" id="3b">
+      <div class="dv-olabel"><a class="dv-oid" href="#3b">3b</a> Silver Sea — high contrast, film grain drama</div>
+      <div class="dv-card" style="width:500px;background:#141e28;font-family:'Cormorant Garamond',Georgia,serif;">
+
+        <!-- Nav -->
+        <div style="background:#141e28;padding:13px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(200,168,75,0.18);">
+          <div style="display:flex;align-items:center;gap:11px;">
+            <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="13.5" fill="none" stroke="#c8a84b" stroke-width="0.8"/>
+              <text x="16" y="21" font-family="'Cormorant Garamond',serif" font-size="12" font-weight="600" fill="#c8a84b" text-anchor="middle">TK</text>
+            </svg>
+            <div>
+              <div style="font-size:11px;letter-spacing:3px;color:#c8a84b;text-transform:uppercase;line-height:1.1;">Team Kroken</div>
+              <div style="font-size:7.5px;letter-spacing:2px;color:rgba(200,168,75,0.48);text-transform:uppercase;">Gamla Stan Yacht Club</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:18px;align-items:center;">
+            <span style="font-size:9px;letter-spacing:2px;color:rgba(220,210,190,0.38);text-transform:uppercase;">Racing</span>
+            <span style="font-size:9px;letter-spacing:2px;color:rgba(220,210,190,0.38);text-transform:uppercase;">Team</span>
+            <span style="font-size:9px;letter-spacing:2px;color:#c8a84b;text-transform:uppercase;border-bottom:0.75px solid #c8a84b;padding-bottom:2px;">Sponsorship</span>
+          </div>
+        </div>
+
+        <!-- Hero — silver aerial photo -->
+        <div style="position:relative;height:286px;overflow:hidden;">
+          <img src="uploads/pasted-1783432569368-0.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;">
+          <div style="position:absolute;inset:0;background:linear-gradient(175deg,rgba(20,30,40,0.3) 0%,rgba(20,30,40,0.68) 100%);"></div>
+          <div style="position:relative;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+            <svg width="240" height="14" viewBox="0 0 240 14" style="display:block;margin-bottom:14px" xmlns="http://www.w3.org/2000/svg">
+              <line x1="0" y1="7" x2="105" y2="7" stroke="#c8a84b" stroke-width="0.75"/>
+              <polygon points="120,3 116,7 120,11 124,7" fill="#c8a84b"/>
+              <line x1="135" y1="7" x2="240" y2="7" stroke="#c8a84b" stroke-width="0.75"/>
+            </svg>
+            <div style="font-size:8.5px;letter-spacing:5px;color:#c8a84b;text-transform:uppercase;margin-bottom:12px;">Gamla Stan Yacht Club · Sweden</div>
+            <div style="font-size:54px;letter-spacing:7px;color:#ece4d4;font-weight:300;line-height:0.92;text-transform:uppercase;text-align:center;text-shadow:0 2px 32px rgba(0,0,0,0.5);">Team<br>Kroken</div>
+            <svg width="240" height="14" viewBox="0 0 240 14" style="display:block;margin-top:14px;margin-bottom:10px" xmlns="http://www.w3.org/2000/svg">
+              <line x1="0" y1="7" x2="105" y2="7" stroke="#c8a84b" stroke-width="0.75"/>
+              <polygon points="120,3 116,7 120,11 124,7" fill="#c8a84b"/>
+              <line x1="135" y1="7" x2="240" y2="7" stroke="#c8a84b" stroke-width="0.75"/>
+            </svg>
+            <div style="font-size:8px;letter-spacing:4px;color:rgba(200,168,75,0.7);text-transform:uppercase;">J/24 World Championship 2025</div>
+          </div>
+        </div>
+
+        <!-- Colours extracted from silver photo -->
+        <div style="padding:16px 22px;border-top:1px solid rgba(200,168,75,0.12);border-bottom:1px solid rgba(200,168,75,0.12);">
+          <div style="font-size:7.5px;letter-spacing:2.5px;color:rgba(200,168,75,0.48);text-transform:uppercase;margin-bottom:10px;">Colour System — from the archive</div>
+          <div style="display:flex;gap:8px;">
+            <div style="flex:1;"><div style="height:28px;background:#141e28;border:1px solid rgba(255,255,255,0.08);border-radius:3px;"></div><div style="font-size:7.5px;color:rgba(220,210,190,0.3);margin-top:4px;font-family:ui-monospace,monospace;">#141E28</div><div style="font-size:7.5px;color:rgba(220,210,190,0.22);">Storm</div></div>
+            <div style="flex:1;"><div style="height:28px;background:#b8bcc4;border-radius:3px;"></div><div style="font-size:7.5px;color:rgba(220,210,190,0.3);margin-top:4px;font-family:ui-monospace,monospace;">#B8BCC4</div><div style="font-size:7.5px;color:rgba(220,210,190,0.22);">Silver</div></div>
+            <div style="flex:1;"><div style="height:28px;background:#c8a84b;border-radius:3px;"></div><div style="font-size:7.5px;color:rgba(220,210,190,0.3);margin-top:4px;font-family:ui-monospace,monospace;">#C8A84B</div><div style="font-size:7.5px;color:rgba(220,210,190,0.22);">Brass</div></div>
+            <div style="flex:1;"><div style="height:28px;background:#ece4d4;border-radius:3px;"></div><div style="font-size:7.5px;color:rgba(220,210,190,0.3);margin-top:4px;font-family:ui-monospace,monospace;">#ECE4D4</div><div style="font-size:7.5px;color:rgba(220,210,190,0.22);">Sail</div></div>
+            <div style="flex:1;"><div style="height:28px;background:#3a5028;border-radius:3px;"></div><div style="font-size:7.5px;color:rgba(220,210,190,0.3);margin-top:4px;font-family:ui-monospace,monospace;">#3A5028</div><div style="font-size:7.5px;color:rgba(220,210,190,0.22);">Spinnaker</div></div>
+          </div>
+        </div>
+
+        <!-- Typography -->
+        <div style="padding:16px 22px;border-bottom:1px solid rgba(200,168,75,0.12);">
+          <div style="font-size:7.5px;letter-spacing:2.5px;color:rgba(200,168,75,0.48);text-transform:uppercase;margin-bottom:10px;">Typography — Cormorant Garamond</div>
+          <div style="font-size:30px;font-weight:300;color:#ece4d4;letter-spacing:1px;line-height:1;">Racing since 1987</div>
+          <div style="font-size:11px;font-style:italic;color:rgba(236,228,212,0.48);margin-top:3px;">Gamla Stan Yacht Club, Stockholm</div>
+          <div style="font-size:10px;color:rgba(236,228,212,0.38);margin-top:8px;line-height:1.65;">We compete with purpose — representing the finest tradition of Swedish offshore racing. Our crew of eight brings world-class experience to every start line.</div>
+          <div style="display:flex;gap:14px;margin-top:10px;align-items:baseline;">
+            <span style="font-size:26px;font-weight:600;color:#ece4d4;">Aa</span>
+            <span style="font-size:18px;font-weight:300;color:rgba(236,228,212,0.6);">Aa</span>
+            <span style="font-size:13px;font-style:italic;color:rgba(236,228,212,0.4);">Aa</span>
+            <span style="font-size:8.5px;letter-spacing:4px;text-transform:uppercase;color:rgba(200,168,75,0.65);">SMALL CAPS</span>
+          </div>
+        </div>
+
+        <!-- Components -->
+        <div style="padding:16px 22px;">
+          <div style="font-size:7.5px;letter-spacing:2.5px;color:rgba(200,168,75,0.48);text-transform:uppercase;margin-bottom:12px;">UI Components</div>
+          <div style="display:flex;gap:10px;margin-bottom:14px;">
+            <button style="background:#c8a84b;color:#141e28;border:none;padding:9px 20px;font-family:'Cormorant Garamond',serif;font-size:9.5px;letter-spacing:3px;text-transform:uppercase;cursor:pointer;font-weight:600;">Become a Partner</button>
+            <button style="background:transparent;color:#c8a84b;border:1px solid rgba(200,168,75,0.45);padding:9px 20px;font-family:'Cormorant Garamond',serif;font-size:9.5px;letter-spacing:3px;text-transform:uppercase;cursor:pointer;">Learn More</button>
+          </div>
+          <div style="border:1px solid rgba(200,168,75,0.2);padding:14px;">
+            <div style="font-size:7px;letter-spacing:3px;color:#c8a84b;text-transform:uppercase;margin-bottom:5px;">Platinum Partner</div>
+            <div style="font-size:17px;font-weight:400;color:#ece4d4;letter-spacing:0.5px;">Championship Sponsorship</div>
+            <div style="font-size:9.5px;color:rgba(236,228,212,0.36);margin-top:6px;line-height:1.6;">Visibility across 14 race days · Official partner status · VIP regatta access</div>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /3b -->
+
+  </div>
+  <p class="dv-next">Try next: "build <a class="dv-oid" href="#3a">3a</a> as a full sponsor page with these photos" · "mix <a class="dv-oid" href="#3a">3a</a>'s blue with the sandy base from <a class="dv-oid" href="#2b">2b</a>" · "add more photos into <a class="dv-oid" href="#3b">3b</a>"</p>
+</section>
+
+<section class="dv-turn" id="t2">
+  <div class="dv-thd">
+    <a class="dv-tid" href="#t2">2</a>
+    <span class="dv-tname">Navy + sandy white, Cormorant Garamond — riffs on <a class="dv-oid" href="#1a">1a</a></span>
+  </div>
+  <div class="dv-opts">
+
+    <!-- 2a: Full dark navy -->
+    <div class="dv-opt" id="2a">
+      <div class="dv-olabel"><a class="dv-oid" href="#2a">2a</a> Deep navy — all-dark, night sea</div>
+      <div class="dv-card" style="width:500px;background:#071624;font-family:'Cormorant Garamond',Georgia,serif;">
+
+        <!-- Nav -->
+        <div style="background:#071624;padding:13px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(200,168,75,0.2);">
+          <div style="display:flex;align-items:center;gap:11px;">
+            <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="13.5" fill="none" stroke="#c8a84b" stroke-width="0.8"/>
+              <text x="16" y="21" font-family="'Cormorant Garamond',serif" font-size="12" font-weight="600" fill="#c8a84b" text-anchor="middle">TK</text>
+            </svg>
+            <div>
+              <div style="font-size:11px;letter-spacing:3px;color:#c8a84b;text-transform:uppercase;line-height:1.1;">Team Kroken</div>
+              <div style="font-size:7.5px;letter-spacing:2px;color:rgba(200,168,75,0.5);text-transform:uppercase;">Gamla Stan Yacht Club</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:18px;align-items:center;">
+            <span style="font-size:9px;letter-spacing:2px;color:rgba(237,224,190,0.4);text-transform:uppercase;">Racing</span>
+            <span style="font-size:9px;letter-spacing:2px;color:rgba(237,224,190,0.4);text-transform:uppercase;">Team</span>
+            <span style="font-size:9px;letter-spacing:2px;color:#c8a84b;text-transform:uppercase;border-bottom:0.75px solid #c8a84b;padding-bottom:2px;">Sponsorship</span>
+          </div>
+        </div>
+
+        <!-- Hero -->
+        <div style="position:relative;height:270px;overflow:hidden;background:#071624;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+          <svg width="500" height="270" viewBox="0 0 500 270" style="position:absolute;top:0;left:0;width:100%;height:100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <pattern id="p2a" width="28" height="28" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                <rect width="28" height="28" fill="#071624"/>
+                <rect width="14" height="28" fill="rgba(200,168,75,0.04)"/>
+              </pattern>
+            </defs>
+            <rect width="500" height="270" fill="url(#p2a)"/>
+            <text x="250" y="140" font-family="ui-monospace,monospace" font-size="9" fill="rgba(200,168,75,0.2)" text-anchor="middle" dominant-baseline="middle" letter-spacing="5">TEAM PHOTO</text>
+          </svg>
+          <div style="position:relative;display:flex;flex-direction:column;align-items:center;">
+            <svg width="240" height="14" viewBox="0 0 240 14" style="display:block;margin-bottom:14px" xmlns="http://www.w3.org/2000/svg">
+              <line x1="0" y1="7" x2="105" y2="7" stroke="#c8a84b" stroke-width="0.75"/>
+              <polygon points="120,3 116,7 120,11 124,7" fill="#c8a84b"/>
+              <line x1="135" y1="7" x2="240" y2="7" stroke="#c8a84b" stroke-width="0.75"/>
+            </svg>
+            <div style="font-size:8.5px;letter-spacing:5px;color:#c8a84b;text-transform:uppercase;margin-bottom:12px;">Gamla Stan Yacht Club · Sweden</div>
+            <div style="font-size:54px;letter-spacing:7px;color:#ede0be;font-weight:300;line-height:0.92;text-transform:uppercase;text-align:center;">Team<br>Kroken</div>
+            <svg width="240" height="14" viewBox="0 0 240 14" style="display:block;margin-top:14px;margin-bottom:10px" xmlns="http://www.w3.org/2000/svg">
+              <line x1="0" y1="7" x2="105" y2="7" stroke="#c8a84b" stroke-width="0.75"/>
+              <polygon points="120,3 116,7 120,11 124,7" fill="#c8a84b"/>
+              <line x1="135" y1="7" x2="240" y2="7" stroke="#c8a84b" stroke-width="0.75"/>
+            </svg>
+            <div style="font-size:8px;letter-spacing:4px;color:rgba(200,168,75,0.6);text-transform:uppercase;">J/24 World Championship 2025</div>
+          </div>
+        </div>
+
+        <!-- Colours -->
+        <div style="padding:16px 22px;border-top:1px solid rgba(200,168,75,0.14);border-bottom:1px solid rgba(200,168,75,0.14);">
+          <div style="font-size:7.5px;letter-spacing:2.5px;color:rgba(200,168,75,0.5);text-transform:uppercase;margin-bottom:10px;">Colour System</div>
+          <div style="display:flex;gap:8px;">
+            <div style="flex:1;"><div style="height:28px;background:#071624;border:1px solid rgba(255,255,255,0.1);border-radius:3px;"></div><div style="font-size:7.5px;color:rgba(237,224,190,0.3);margin-top:4px;font-family:ui-monospace,monospace;">#071624</div><div style="font-size:7.5px;color:rgba(237,224,190,0.22);">Deep Navy</div></div>
+            <div style="flex:1;"><div style="height:28px;background:#1a3f6b;border-radius:3px;"></div><div style="font-size:7.5px;color:rgba(237,224,190,0.3);margin-top:4px;font-family:ui-monospace,monospace;">#1A3F6B</div><div style="font-size:7.5px;color:rgba(237,224,190,0.22);">Ocean</div></div>
+            <div style="flex:1;"><div style="height:28px;background:#c8a84b;border-radius:3px;"></div><div style="font-size:7.5px;color:rgba(237,224,190,0.3);margin-top:4px;font-family:ui-monospace,monospace;">#C8A84B</div><div style="font-size:7.5px;color:rgba(237,224,190,0.22);">Brass</div></div>
+            <div style="flex:1;"><div style="height:28px;background:#ede0be;border-radius:3px;"></div><div style="font-size:7.5px;color:rgba(237,224,190,0.3);margin-top:4px;font-family:ui-monospace,monospace;">#EDE0BE</div><div style="font-size:7.5px;color:rgba(237,224,190,0.22);">Sand</div></div>
+            <div style="flex:1;"><div style="height:28px;background:#c8102e;border-radius:3px;"></div><div style="font-size:7.5px;color:rgba(237,224,190,0.3);margin-top:4px;font-family:ui-monospace,monospace;">#C8102E</div><div style="font-size:7.5px;color:rgba(237,224,190,0.22);">Pennant</div></div>
+          </div>
+        </div>
+
+        <!-- Typography -->
+        <div style="padding:16px 22px;border-bottom:1px solid rgba(200,168,75,0.14);">
+          <div style="font-size:7.5px;letter-spacing:2.5px;color:rgba(200,168,75,0.5);text-transform:uppercase;margin-bottom:10px;">Typography — Cormorant Garamond</div>
+          <div style="font-size:30px;font-weight:300;color:#ede0be;letter-spacing:1px;line-height:1;">Racing since 1987</div>
+          <div style="font-size:11px;font-style:italic;color:rgba(237,224,190,0.5);margin-top:3px;letter-spacing:0.5px;">Gamla Stan Yacht Club, Stockholm</div>
+          <div style="font-size:10px;color:rgba(237,224,190,0.4);margin-top:8px;line-height:1.65;">We compete with purpose — representing the finest tradition of Swedish offshore racing. Our crew of eight brings world-class experience to every start line.</div>
+          <div style="display:flex;gap:14px;margin-top:10px;align-items:baseline;">
+            <span style="font-size:26px;font-weight:600;color:#ede0be;">Aa</span>
+            <span style="font-size:18px;font-weight:300;color:rgba(237,224,190,0.65);">Aa</span>
+            <span style="font-size:13px;font-style:italic;color:rgba(237,224,190,0.45);">Aa</span>
+            <span style="font-size:8.5px;letter-spacing:4px;text-transform:uppercase;color:rgba(200,168,75,0.7);">SMALL CAPS</span>
+          </div>
+        </div>
+
+        <!-- Components -->
+        <div style="padding:16px 22px;">
+          <div style="font-size:7.5px;letter-spacing:2.5px;color:rgba(200,168,75,0.5);text-transform:uppercase;margin-bottom:12px;">UI Components</div>
+          <div style="display:flex;gap:10px;margin-bottom:14px;">
+            <button style="background:#c8a84b;color:#071624;border:none;padding:9px 20px;font-family:'Cormorant Garamond',serif;font-size:9.5px;letter-spacing:3px;text-transform:uppercase;cursor:pointer;font-weight:600;">Become a Partner</button>
+            <button style="background:transparent;color:#c8a84b;border:1px solid rgba(200,168,75,0.55);padding:9px 20px;font-family:'Cormorant Garamond',serif;font-size:9.5px;letter-spacing:3px;text-transform:uppercase;cursor:pointer;">Learn More</button>
+          </div>
+          <div style="border:1px solid rgba(200,168,75,0.25);padding:14px;">
+            <div style="font-size:7px;letter-spacing:3px;color:#c8a84b;text-transform:uppercase;margin-bottom:5px;">Platinum Partner</div>
+            <div style="font-size:17px;font-weight:400;color:#ede0be;letter-spacing:0.5px;">Championship Sponsorship</div>
+            <div style="font-size:9.5px;color:rgba(237,224,190,0.38);margin-top:6px;line-height:1.6;">Visibility across 14 race days · Official partner status · VIP regatta access</div>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /2a -->
+
+    <!-- 2b: Sandy white base + navy -->
+    <div class="dv-opt" id="2b">
+      <div class="dv-olabel"><a class="dv-oid" href="#2b">2b</a> Sandy white base — lighter, more open</div>
+      <div class="dv-card" style="width:500px;background:#f0e8d4;font-family:'Cormorant Garamond',Georgia,serif;">
+
+        <!-- Nav -->
+        <div style="background:#f0e8d4;padding:13px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(7,22,36,0.14);">
+          <div style="display:flex;align-items:center;gap:11px;">
+            <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="13.5" fill="none" stroke="#071624" stroke-width="0.8"/>
+              <text x="16" y="21" font-family="'Cormorant Garamond',serif" font-size="12" font-weight="600" fill="#071624" text-anchor="middle">TK</text>
+            </svg>
+            <div>
+              <div style="font-size:11px;letter-spacing:3px;color:#071624;text-transform:uppercase;line-height:1.1;">Team Kroken</div>
+              <div style="font-size:7.5px;letter-spacing:2px;color:rgba(7,22,36,0.45);text-transform:uppercase;">Gamla Stan Yacht Club</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:18px;align-items:center;">
+            <span style="font-size:9px;letter-spacing:2px;color:rgba(7,22,36,0.38);text-transform:uppercase;">Racing</span>
+            <span style="font-size:9px;letter-spacing:2px;color:rgba(7,22,36,0.38);text-transform:uppercase;">Team</span>
+            <span style="font-size:9px;letter-spacing:2px;color:#071624;text-transform:uppercase;border-bottom:0.75px solid #9a8040;padding-bottom:2px;">Sponsorship</span>
+          </div>
+        </div>
+
+        <!-- Hero (stays dark) -->
+        <div style="position:relative;height:270px;overflow:hidden;background:#071624;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+          <svg width="500" height="270" viewBox="0 0 500 270" style="position:absolute;top:0;left:0;width:100%;height:100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <pattern id="p2b" width="28" height="28" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                <rect width="28" height="28" fill="#071624"/>
+                <rect width="14" height="28" fill="rgba(240,232,212,0.04)"/>
+              </pattern>
+            </defs>
+            <rect width="500" height="270" fill="url(#p2b)"/>
+            <text x="250" y="140" font-family="ui-monospace,monospace" font-size="9" fill="rgba(240,232,212,0.2)" text-anchor="middle" dominant-baseline="middle" letter-spacing="5">TEAM PHOTO</text>
+          </svg>
+          <div style="position:relative;display:flex;flex-direction:column;align-items:center;">
+            <svg width="240" height="14" viewBox="0 0 240 14" style="display:block;margin-bottom:14px" xmlns="http://www.w3.org/2000/svg">
+              <line x1="0" y1="7" x2="105" y2="7" stroke="#c8a84b" stroke-width="0.75"/>
+              <polygon points="120,3 116,7 120,11 124,7" fill="#c8a84b"/>
+              <line x1="135" y1="7" x2="240" y2="7" stroke="#c8a84b" stroke-width="0.75"/>
+            </svg>
+            <div style="font-size:8.5px;letter-spacing:5px;color:#c8a84b;text-transform:uppercase;margin-bottom:12px;">Gamla Stan Yacht Club · Sweden</div>
+            <div style="font-size:54px;letter-spacing:7px;color:#f0e8d4;font-weight:300;line-height:0.92;text-transform:uppercase;text-align:center;">Team<br>Kroken</div>
+            <svg width="240" height="14" viewBox="0 0 240 14" style="display:block;margin-top:14px;margin-bottom:10px" xmlns="http://www.w3.org/2000/svg">
+              <line x1="0" y1="7" x2="105" y2="7" stroke="#c8a84b" stroke-width="0.75"/>
+              <polygon points="120,3 116,7 120,11 124,7" fill="#c8a84b"/>
+              <line x1="135" y1="7" x2="240" y2="7" stroke="#c8a84b" stroke-width="0.75"/>
+            </svg>
+            <div style="font-size:8px;letter-spacing:4px;color:rgba(200,168,75,0.65);text-transform:uppercase;">J/24 World Championship 2025</div>
+          </div>
+        </div>
+
+        <!-- Colours -->
+        <div style="padding:16px 22px;border-bottom:1px solid rgba(7,22,36,0.12);">
+          <div style="font-size:7.5px;letter-spacing:2.5px;color:rgba(7,22,36,0.38);text-transform:uppercase;margin-bottom:10px;">Colour System</div>
+          <div style="display:flex;gap:8px;">
+            <div style="flex:1;"><div style="height:28px;background:#071624;border-radius:3px;"></div><div style="font-size:7.5px;color:rgba(7,22,36,0.38);margin-top:4px;font-family:ui-monospace,monospace;">#071624</div><div style="font-size:7.5px;color:rgba(7,22,36,0.28);">Navy</div></div>
+            <div style="flex:1;"><div style="height:28px;background:#1a3f6b;border-radius:3px;"></div><div style="font-size:7.5px;color:rgba(7,22,36,0.38);margin-top:4px;font-family:ui-monospace,monospace;">#1A3F6B</div><div style="font-size:7.5px;color:rgba(7,22,36,0.28);">Ocean</div></div>
+            <div style="flex:1;"><div style="height:28px;background:#9a8040;border-radius:3px;"></div><div style="font-size:7.5px;color:rgba(7,22,36,0.38);margin-top:4px;font-family:ui-monospace,monospace;">#9A8040</div><div style="font-size:7.5px;color:rgba(7,22,36,0.28);">Brass</div></div>
+            <div style="flex:1;"><div style="height:28px;background:#f0e8d4;border:1px solid rgba(7,22,36,0.14);border-radius:3px;"></div><div style="font-size:7.5px;color:rgba(7,22,36,0.38);margin-top:4px;font-family:ui-monospace,monospace;">#F0E8D4</div><div style="font-size:7.5px;color:rgba(7,22,36,0.28);">Sand</div></div>
+            <div style="flex:1;"><div style="height:28px;background:#c8102e;border-radius:3px;"></div><div style="font-size:7.5px;color:rgba(7,22,36,0.38);margin-top:4px;font-family:ui-monospace,monospace;">#C8102E</div><div style="font-size:7.5px;color:rgba(7,22,36,0.28);">Pennant</div></div>
+          </div>
+        </div>
+
+        <!-- Typography -->
+        <div style="padding:16px 22px;border-bottom:1px solid rgba(7,22,36,0.12);">
+          <div style="font-size:7.5px;letter-spacing:2.5px;color:rgba(7,22,36,0.38);text-transform:uppercase;margin-bottom:10px;">Typography — Cormorant Garamond</div>
+          <div style="font-size:30px;font-weight:300;color:#071624;letter-spacing:1px;line-height:1;">Racing since 1987</div>
+          <div style="font-size:11px;font-style:italic;color:rgba(7,22,36,0.45);margin-top:3px;letter-spacing:0.5px;">Gamla Stan Yacht Club, Stockholm</div>
+          <div style="font-size:10px;color:rgba(7,22,36,0.45);margin-top:8px;line-height:1.65;">We compete with purpose — representing the finest tradition of Swedish offshore racing. Our crew of eight brings world-class experience to every start line.</div>
+          <div style="display:flex;gap:14px;margin-top:10px;align-items:baseline;">
+            <span style="font-size:26px;font-weight:600;color:#071624;">Aa</span>
+            <span style="font-size:18px;font-weight:300;color:rgba(7,22,36,0.6);">Aa</span>
+            <span style="font-size:13px;font-style:italic;color:rgba(7,22,36,0.4);">Aa</span>
+            <span style="font-size:8.5px;letter-spacing:4px;text-transform:uppercase;color:rgba(154,128,64,0.9);">SMALL CAPS</span>
+          </div>
+        </div>
+
+        <!-- Components -->
+        <div style="padding:16px 22px;">
+          <div style="font-size:7.5px;letter-spacing:2.5px;color:rgba(7,22,36,0.38);text-transform:uppercase;margin-bottom:12px;">UI Components</div>
+          <div style="display:flex;gap:10px;margin-bottom:14px;">
+            <button style="background:#071624;color:#f0e8d4;border:none;padding:9px 20px;font-family:'Cormorant Garamond',serif;font-size:9.5px;letter-spacing:3px;text-transform:uppercase;cursor:pointer;font-weight:600;">Become a Partner</button>
+            <button style="background:transparent;color:#071624;border:1px solid rgba(7,22,36,0.35);padding:9px 20px;font-family:'Cormorant Garamond',serif;font-size:9.5px;letter-spacing:3px;text-transform:uppercase;cursor:pointer;">Learn More</button>
+          </div>
+          <div style="border:1px solid rgba(7,22,36,0.18);padding:14px;">
+            <div style="font-size:7px;letter-spacing:3px;color:#9a8040;text-transform:uppercase;margin-bottom:5px;">Platinum Partner</div>
+            <div style="font-size:17px;font-weight:400;color:#071624;letter-spacing:0.5px;">Championship Sponsorship</div>
+            <div style="font-size:9.5px;color:rgba(7,22,36,0.42);margin-top:6px;line-height:1.6;">Visibility across 14 race days · Official partner status · VIP regatta access</div>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /2b -->
+
+  </div>
+  <p class="dv-next">Try next: "build <a class="dv-oid" href="#2a">2a</a> out as a full sponsor page" · "add a Swedish burgee or flag mark to <a class="dv-oid" href="#2b">2b</a>" · "try the <a class="dv-oid" href="#2b">2b</a> sandy base with a slightly warmer sand tone"</p>
+</section>
+
+<section class="dv-turn" id="t1">
+  <div class="dv-thd">
+    <a class="dv-tid" href="#t1">1</a>
+    <span class="dv-tname">Three graphical directions for Team Kroken</span>
+  </div>
+  <div class="dv-opts">
+
+    <!-- ─── 1a: THE COMMODORE ─── -->
+    <div class="dv-opt" id="1a">
+      <div class="dv-olabel">
+        <a class="dv-oid" href="#1a">1a</a>
+        The Commodore — dark prestige, brass &amp; parchment
+      </div>
+      <div class="dv-card" style="width: 500px; background: #0e1b0c; font-family: 'Cormorant Garamond', Georgia, serif;">
+
+        <!-- Nav -->
+        <div style="background: #0e1b0c; padding: 13px 24px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(200,168,75,0.22);">
+          <div style="display: flex; align-items: center; gap: 11px;">
+            <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="13.5" fill="none" stroke="#c8a84b" stroke-width="0.8"/>
+              <text x="16" y="21" font-family="'Cormorant Garamond',serif" font-size="12" font-weight="600" fill="#c8a84b" text-anchor="middle">TK</text>
+            </svg>
+            <div>
+              <div style="font-size: 11px; letter-spacing: 3px; color: #c8a84b; text-transform: uppercase; line-height: 1.1;">Team Kroken</div>
+              <div style="font-size: 7.5px; letter-spacing: 2px; color: rgba(200,168,75,0.5); text-transform: uppercase;">Gamla Stan Yacht Club</div>
+            </div>
+          </div>
+          <div style="display: flex; gap: 18px; align-items: center;">
+            <span style="font-size: 9px; letter-spacing: 2px; color: rgba(237,224,190,0.45); text-transform: uppercase;">Racing</span>
+            <span style="font-size: 9px; letter-spacing: 2px; color: rgba(237,224,190,0.45); text-transform: uppercase;">Team</span>
+            <span style="font-size: 9px; letter-spacing: 2px; color: #c8a84b; text-transform: uppercase; border-bottom: 0.75px solid #c8a84b; padding-bottom: 2px;">Sponsorship</span>
+          </div>
+        </div>
+
+        <!-- Hero -->
+        <div style="position: relative; height: 270px; overflow: hidden; background: #0e1b0c; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+          <!-- Stripe texture -->
+          <svg width="500" height="270" viewBox="0 0 500 270" style="position:absolute;top:0;left:0;width:100%;height:100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <pattern id="p1a" width="28" height="28" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                <rect width="28" height="28" fill="#0e1b0c"/>
+                <rect width="14" height="28" fill="rgba(200,168,75,0.05)"/>
+              </pattern>
+            </defs>
+            <rect width="500" height="270" fill="url(#p1a)"/>
+            <text x="250" y="140" font-family="ui-monospace,monospace" font-size="9" fill="rgba(200,168,75,0.22)" text-anchor="middle" dominant-baseline="middle" letter-spacing="5">TEAM PHOTO</text>
+          </svg>
+
+          <!-- Overlay content -->
+          <div style="position: relative; display: flex; flex-direction: column; align-items: center;">
+            <!-- Top ornament -->
+            <svg width="240" height="14" viewBox="0 0 240 14" style="display:block;margin-bottom:14px" xmlns="http://www.w3.org/2000/svg">
+              <line x1="0" y1="7" x2="105" y2="7" stroke="#c8a84b" stroke-width="0.75"/>
+              <polygon points="120,3 116,7 120,11 124,7" fill="#c8a84b"/>
+              <line x1="135" y1="7" x2="240" y2="7" stroke="#c8a84b" stroke-width="0.75"/>
+            </svg>
+            <div style="font-size: 8.5px; letter-spacing: 5px; color: #c8a84b; text-transform: uppercase; margin-bottom: 12px;">Gamla Stan Yacht Club · Sweden</div>
+            <div style="font-size: 54px; letter-spacing: 7px; color: #ede0be; font-weight: 300; line-height: 0.92; text-transform: uppercase; text-align: center;">Team<br>Kroken</div>
+            <!-- Bottom ornament -->
+            <svg width="240" height="14" viewBox="0 0 240 14" style="display:block;margin-top:14px;margin-bottom:10px" xmlns="http://www.w3.org/2000/svg">
+              <line x1="0" y1="7" x2="105" y2="7" stroke="#c8a84b" stroke-width="0.75"/>
+              <polygon points="120,3 116,7 120,11 124,7" fill="#c8a84b"/>
+              <line x1="135" y1="7" x2="240" y2="7" stroke="#c8a84b" stroke-width="0.75"/>
+            </svg>
+            <div style="font-size: 8px; letter-spacing: 4px; color: rgba(200,168,75,0.6); text-transform: uppercase;">J/24 World Championship 2025</div>
+          </div>
+        </div>
+
+        <!-- Colours -->
+        <div style="padding: 16px 22px; border-top: 1px solid rgba(200,168,75,0.16); border-bottom: 1px solid rgba(200,168,75,0.16);">
+          <div style="font-size: 7.5px; letter-spacing: 2.5px; color: rgba(200,168,75,0.55); text-transform: uppercase; margin-bottom: 10px;">Colour System</div>
+          <div style="display: flex; gap: 8px;">
+            <div style="flex: 1;">
+              <div style="height: 28px; background: #0e1b0c; border: 1px solid rgba(255,255,255,0.1); border-radius: 3px;"></div>
+              <div style="font-size: 7.5px; color: rgba(237,224,190,0.35); margin-top: 4px; font-family: ui-monospace, monospace;">#0E1B0C</div>
+              <div style="font-size: 7.5px; color: rgba(237,224,190,0.25);">Forest</div>
+            </div>
+            <div style="flex: 1;">
+              <div style="height: 28px; background: #c8a84b; border-radius: 3px;"></div>
+              <div style="font-size: 7.5px; color: rgba(237,224,190,0.35); margin-top: 4px; font-family: ui-monospace, monospace;">#C8A84B</div>
+              <div style="font-size: 7.5px; color: rgba(237,224,190,0.25);">Brass</div>
+            </div>
+            <div style="flex: 1;">
+              <div style="height: 28px; background: #ede0be; border-radius: 3px;"></div>
+              <div style="font-size: 7.5px; color: rgba(237,224,190,0.35); margin-top: 4px; font-family: ui-monospace, monospace;">#EDE0BE</div>
+              <div style="font-size: 7.5px; color: rgba(237,224,190,0.25);">Parchment</div>
+            </div>
+            <div style="flex: 1;">
+              <div style="height: 28px; background: #3e6628; border-radius: 3px;"></div>
+              <div style="font-size: 7.5px; color: rgba(237,224,190,0.35); margin-top: 4px; font-family: ui-monospace, monospace;">#3E6628</div>
+              <div style="font-size: 7.5px; color: rgba(237,224,190,0.25);">Leaf</div>
+            </div>
+            <div style="flex: 1;">
+              <div style="height: 28px; background: #7a1515; border-radius: 3px;"></div>
+              <div style="font-size: 7.5px; color: rgba(237,224,190,0.35); margin-top: 4px; font-family: ui-monospace, monospace;">#7A1515</div>
+              <div style="font-size: 7.5px; color: rgba(237,224,190,0.25);">Pennant</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Typography -->
+        <div style="padding: 16px 22px; border-bottom: 1px solid rgba(200,168,75,0.16);">
+          <div style="font-size: 7.5px; letter-spacing: 2.5px; color: rgba(200,168,75,0.55); text-transform: uppercase; margin-bottom: 10px;">Typography — Cormorant Garamond</div>
+          <div style="font-size: 30px; font-weight: 300; color: #ede0be; letter-spacing: 1px; line-height: 1;">Racing since 1987</div>
+          <div style="font-size: 11px; font-style: italic; color: rgba(237,224,190,0.6); margin-top: 3px; letter-spacing: 0.5px;">Gamla Stan Yacht Club, Stockholm</div>
+          <div style="font-size: 10px; color: rgba(237,224,190,0.45); margin-top: 8px; line-height: 1.65;">
+            We compete with purpose — representing the finest tradition of Swedish offshore racing. Our crew of eight brings world-class experience to every start line.
+          </div>
+          <div style="display: flex; gap: 14px; margin-top: 10px; align-items: baseline;">
+            <span style="font-size: 26px; font-weight: 600; color: #ede0be;">Aa</span>
+            <span style="font-size: 18px; font-weight: 300; color: rgba(237,224,190,0.7);">Aa</span>
+            <span style="font-size: 13px; font-style: italic; color: rgba(237,224,190,0.5);">Aa</span>
+            <span style="font-size: 8.5px; letter-spacing: 4px; text-transform: uppercase; color: rgba(200,168,75,0.75);">SMALL CAPS</span>
+          </div>
+        </div>
+
+        <!-- Components -->
+        <div style="padding: 16px 22px;">
+          <div style="font-size: 7.5px; letter-spacing: 2.5px; color: rgba(200,168,75,0.55); text-transform: uppercase; margin-bottom: 12px;">UI Components</div>
+          <div style="display: flex; gap: 10px; margin-bottom: 14px;">
+            <button style="background: #c8a84b; color: #0e1b0c; border: none; padding: 9px 20px; font-family: 'Cormorant Garamond',serif; font-size: 9.5px; letter-spacing: 3px; text-transform: uppercase; cursor: pointer; font-weight: 600;">Become a Partner</button>
+            <button style="background: transparent; color: #c8a84b; border: 1px solid rgba(200,168,75,0.6); padding: 9px 20px; font-family: 'Cormorant Garamond',serif; font-size: 9.5px; letter-spacing: 3px; text-transform: uppercase; cursor: pointer;">Learn More</button>
+          </div>
+          <div style="border: 1px solid rgba(200,168,75,0.28); padding: 14px;">
+            <div style="font-size: 7px; letter-spacing: 3px; color: #c8a84b; text-transform: uppercase; margin-bottom: 5px;">Platinum Partner</div>
+            <div style="font-size: 17px; font-weight: 400; color: #ede0be; letter-spacing: 0.5px;">Championship Sponsorship</div>
+            <div style="font-size: 9.5px; color: rgba(237,224,190,0.4); margin-top: 6px; line-height: 1.6;">Visibility across 14 race days · Official partner status · VIP regatta access</div>
+          </div>
+        </div>
+
+      </div><!-- /dv-card 1a -->
+    </div><!-- /dv-opt 1a -->
+
+
+    <!-- ─── 1b: FREMANTLE '87 ─── -->
+    <div class="dv-opt" id="1b">
+      <div class="dv-olabel">
+        <a class="dv-oid" href="#1b">1b</a>
+        Fremantle '87 — navy, signal red, race energy
+      </div>
+      <div class="dv-card" style="width: 500px; background: #091828; font-family: 'Libre Baskerville', Georgia, serif;">
+
+        <!-- Nav -->
+        <div style="background: #091828; padding: 0 0 0 0; border-bottom: 3px solid #c8102e; display: flex; align-items: stretch;">
+          <div style="background: #c8102e; padding: 12px 18px; display: flex; align-items: center;">
+            <span style="font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: #e8dcc8; letter-spacing: 2px; line-height: 1;">TK</span>
+          </div>
+          <div style="padding: 0 18px; display: flex; align-items: center; justify-content: space-between; flex: 1;">
+            <div>
+              <div style="font-family: 'Bebas Neue', sans-serif; font-size: 13px; letter-spacing: 3px; color: #e8dcc8; line-height: 1;">Team Kroken</div>
+              <div style="font-size: 7px; letter-spacing: 2px; color: rgba(232,220,200,0.4); text-transform: uppercase; font-family: 'Libre Baskerville', serif;">Gamla Stan Yacht Club</div>
+            </div>
+            <div style="display: flex; gap: 18px;">
+              <span style="font-size: 8.5px; letter-spacing: 1.5px; color: rgba(232,220,200,0.45); text-transform: uppercase;">Racing</span>
+              <span style="font-size: 8.5px; letter-spacing: 1.5px; color: rgba(232,220,200,0.45); text-transform: uppercase;">Team</span>
+              <span style="font-size: 8.5px; letter-spacing: 1.5px; color: #d4a840; text-transform: uppercase;">Sponsorship</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero -->
+        <div style="position: relative; height: 270px; overflow: hidden; background: #091828; display: flex; flex-direction: column; justify-content: flex-end;">
+          <!-- Stripe placeholder -->
+          <svg width="500" height="270" viewBox="0 0 500 270" style="position:absolute;top:0;left:0;width:100%;height:100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <pattern id="p1b" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(30)">
+                <rect width="24" height="24" fill="#091828"/>
+                <rect width="12" height="24" fill="rgba(232,220,200,0.03)"/>
+              </pattern>
+            </defs>
+            <rect width="500" height="270" fill="url(#p1b)"/>
+            <text x="250" y="135" font-family="ui-monospace,monospace" font-size="9" fill="rgba(232,220,200,0.2)" text-anchor="middle" dominant-baseline="middle" letter-spacing="5">TEAM PHOTO</text>
+          </svg>
+          <!-- Giant race number background -->
+          <div style="position: absolute; right: -10px; top: -20px; font-family: 'Bebas Neue', sans-serif; font-size: 260px; color: rgba(232,220,200,0.04); line-height: 1; user-select: none; pointer-events: none;">21</div>
+          <!-- Bottom red bar + text -->
+          <div style="position: relative; z-index: 1; padding: 0 24px 20px;">
+            <div style="font-family: 'Bebas Neue', sans-serif; font-size: 14px; letter-spacing: 6px; color: #d4a840; margin-bottom: 2px;">Sweden · Gamla Stan Yacht Club</div>
+            <div style="font-family: 'Bebas Neue', sans-serif; font-size: 66px; letter-spacing: 4px; color: #e8dcc8; line-height: 0.88;">Team<br>Kroken</div>
+          </div>
+          <div style="position: relative; z-index: 1; background: #c8102e; padding: 8px 24px; display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-family: 'Bebas Neue', sans-serif; font-size: 13px; letter-spacing: 4px; color: #e8dcc8;">J/24 World Championship 2025</span>
+            <span style="font-family: 'Bebas Neue', sans-serif; font-size: 13px; letter-spacing: 2px; color: rgba(232,220,200,0.6);">SWE · 21</span>
+          </div>
+        </div>
+
+        <!-- Colours -->
+        <div style="padding: 16px 22px; border-top: 1px solid rgba(200,164,64,0.15); border-bottom: 1px solid rgba(200,164,64,0.15);">
+          <div style="font-size: 7.5px; letter-spacing: 2.5px; color: rgba(212,168,64,0.6); text-transform: uppercase; font-family: 'Libre Baskerville',serif; margin-bottom: 10px;">Colour System</div>
+          <div style="display: flex; gap: 8px;">
+            <div style="flex: 1;">
+              <div style="height: 28px; background: #091828; border: 1px solid rgba(255,255,255,0.1); border-radius: 3px;"></div>
+              <div style="font-size: 7.5px; color: rgba(232,220,200,0.3); margin-top: 4px; font-family: ui-monospace,monospace;">#091828</div>
+              <div style="font-size: 7.5px; color: rgba(232,220,200,0.2);">Navy</div>
+            </div>
+            <div style="flex: 1;">
+              <div style="height: 28px; background: #c8102e; border-radius: 3px;"></div>
+              <div style="font-size: 7.5px; color: rgba(232,220,200,0.3); margin-top: 4px; font-family: ui-monospace,monospace;">#C8102E</div>
+              <div style="font-size: 7.5px; color: rgba(232,220,200,0.2);">Signal Red</div>
+            </div>
+            <div style="flex: 1;">
+              <div style="height: 28px; background: #e8dcc8; border-radius: 3px;"></div>
+              <div style="font-size: 7.5px; color: rgba(232,220,200,0.3); margin-top: 4px; font-family: ui-monospace,monospace;">#E8DCC8</div>
+              <div style="font-size: 7.5px; color: rgba(232,220,200,0.2);">Canvas</div>
+            </div>
+            <div style="flex: 1;">
+              <div style="height: 28px; background: #d4a840; border-radius: 3px;"></div>
+              <div style="font-size: 7.5px; color: rgba(232,220,200,0.3); margin-top: 4px; font-family: ui-monospace,monospace;">#D4A840</div>
+              <div style="font-size: 7.5px; color: rgba(232,220,200,0.2);">Trophy</div>
+            </div>
+            <div style="flex: 1;">
+              <div style="height: 28px; background: #1a4878; border-radius: 3px;"></div>
+              <div style="font-size: 7.5px; color: rgba(232,220,200,0.3); margin-top: 4px; font-family: ui-monospace,monospace;">#1A4878</div>
+              <div style="font-size: 7.5px; color: rgba(232,220,200,0.2);">Horizon</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Typography -->
+        <div style="padding: 16px 22px; border-bottom: 1px solid rgba(200,164,64,0.15);">
+          <div style="font-size: 7.5px; letter-spacing: 2.5px; color: rgba(212,168,64,0.6); text-transform: uppercase; margin-bottom: 10px;">Typography — Bebas Neue + Libre Baskerville</div>
+          <div style="font-family: 'Bebas Neue', sans-serif; font-size: 34px; letter-spacing: 3px; color: #e8dcc8; line-height: 1;">Racing for Sweden</div>
+          <div style="font-size: 10.5px; font-style: italic; color: rgba(232,220,200,0.55); margin-top: 4px;">Gamla Stan Yacht Club, Stockholm</div>
+          <div style="font-size: 9.5px; color: rgba(232,220,200,0.4); margin-top: 8px; line-height: 1.7;">
+            We compete with purpose — representing the finest tradition of Swedish offshore racing. Our crew of eight brings world-class experience to every start line.
+          </div>
+          <div style="display: flex; gap: 14px; margin-top: 10px; align-items: baseline;">
+            <span style="font-family: 'Bebas Neue',sans-serif; font-size: 28px; color: #e8dcc8; letter-spacing: 2px;">Aa</span>
+            <span style="font-size: 18px; font-weight: 700; color: rgba(232,220,200,0.7);">Aa</span>
+            <span style="font-size: 13px; font-style: italic; color: rgba(232,220,200,0.5);">Aa</span>
+            <span style="font-size: 8.5px; letter-spacing: 3px; text-transform: uppercase; color: rgba(200,100,40,0.8); font-family:'Libre Baskerville',serif;">BODY SERIF</span>
+          </div>
+        </div>
+
+        <!-- Components -->
+        <div style="padding: 16px 22px;">
+          <div style="font-size: 7.5px; letter-spacing: 2.5px; color: rgba(212,168,64,0.6); text-transform: uppercase; margin-bottom: 12px;">UI Components</div>
+          <div style="display: flex; gap: 10px; margin-bottom: 14px;">
+            <button style="background: #c8102e; color: #e8dcc8; border: none; padding: 9px 20px; font-family: 'Bebas Neue',sans-serif; font-size: 13px; letter-spacing: 3px; cursor: pointer;">Become a Partner</button>
+            <button style="background: transparent; color: #e8dcc8; border: 1px solid rgba(232,220,200,0.4); padding: 9px 20px; font-family: 'Bebas Neue',sans-serif; font-size: 13px; letter-spacing: 3px; cursor: pointer;">Learn More</button>
+          </div>
+          <div style="border-left: 3px solid #c8102e; padding: 12px 14px; background: rgba(232,220,200,0.04);">
+            <div style="font-size: 7px; letter-spacing: 3px; color: #d4a840; text-transform: uppercase; font-family:'Libre Baskerville',serif; margin-bottom: 5px;">Platinum Partner</div>
+            <div style="font-family: 'Bebas Neue',sans-serif; font-size: 20px; letter-spacing: 2px; color: #e8dcc8;">Championship Sponsorship</div>
+            <div style="font-size: 9px; color: rgba(232,220,200,0.38); margin-top: 5px; line-height: 1.6; font-family:'Libre Baskerville',serif;">Visibility across 14 race days · Official partner status · VIP regatta access</div>
+          </div>
+        </div>
+
+      </div><!-- /dv-card 1b -->
+    </div><!-- /dv-opt 1b -->
+
+
+    <!-- ─── 1c: NORDIC PREMIUM ─── -->
+    <div class="dv-opt" id="1c">
+      <div class="dv-olabel">
+        <a class="dv-oid" href="#1c">1c</a>
+        Nordic Premium — editorial, Scandinavian luxury
+      </div>
+      <div class="dv-card" style="width: 500px; background: #f4efe7; font-family: 'DM Sans', system-ui, sans-serif;">
+
+        <!-- Nav -->
+        <div style="background: #f4efe7; padding: 13px 24px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(28,40,53,0.12);">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0.5" y="0.5" width="27" height="27" fill="none" stroke="#1c2835" stroke-width="0.8"/>
+              <text x="14" y="19.5" font-family="'Playfair Display',serif" font-size="11" font-weight="700" fill="#1c2835" text-anchor="middle">TK</text>
+            </svg>
+            <div>
+              <div style="font-family: 'Playfair Display', serif; font-size: 12px; letter-spacing: 1px; color: #1c2835; line-height: 1.1;">Team Kroken</div>
+              <div style="font-size: 7px; letter-spacing: 2px; color: rgba(28,40,53,0.4); text-transform: uppercase;">Gamla Stan Yacht Club</div>
+            </div>
+          </div>
+          <div style="display: flex; gap: 20px;">
+            <span style="font-size: 9px; letter-spacing: 1.5px; color: rgba(28,40,53,0.38); text-transform: uppercase;">Racing</span>
+            <span style="font-size: 9px; letter-spacing: 1.5px; color: rgba(28,40,53,0.38); text-transform: uppercase;">Team</span>
+            <span style="font-size: 9px; letter-spacing: 1.5px; color: #1c2835; text-transform: uppercase; font-weight: 500; border-bottom: 1px solid #a08850; padding-bottom: 2px;">Sponsorship</span>
+          </div>
+        </div>
+
+        <!-- Hero -->
+        <div style="position: relative; height: 270px; overflow: hidden; background: #1c2835; display: flex; flex-direction: column; justify-content: center;">
+          <!-- Stripe texture -->
+          <svg width="500" height="270" viewBox="0 0 500 270" style="position:absolute;top:0;left:0;width:100%;height:100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <pattern id="p1c" width="22" height="22" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                <rect width="22" height="22" fill="#1c2835"/>
+                <rect width="11" height="22" fill="rgba(160,136,80,0.06)"/>
+              </pattern>
+            </defs>
+            <rect width="500" height="270" fill="url(#p1c)"/>
+            <text x="250" y="140" font-family="ui-monospace,monospace" font-size="9" fill="rgba(244,239,231,0.18)" text-anchor="middle" dominant-baseline="middle" letter-spacing="5">TEAM PHOTO</text>
+          </svg>
+
+          <!-- Content — editorial left-aligned -->
+          <div style="position: relative; padding: 0 36px;">
+            <div style="font-size: 7.5px; letter-spacing: 5px; color: #a08850; text-transform: uppercase; margin-bottom: 14px; font-weight: 500;">Sweden · 2025</div>
+            <!-- Gold rule -->
+            <div style="width: 40px; height: 1.5px; background: #a08850; margin-bottom: 16px;"></div>
+            <div style="font-family: 'Playfair Display', serif; font-size: 58px; font-weight: 400; color: #f4efe7; line-height: 0.9; letter-spacing: -1px;">Team<br>Kroken</div>
+            <div style="font-size: 9px; letter-spacing: 3px; color: rgba(244,239,231,0.45); text-transform: uppercase; margin-top: 16px; font-weight: 300;">Gamla Stan Yacht Club · J/24 World Championship</div>
+          </div>
+        </div>
+
+        <!-- Colours -->
+        <div style="padding: 16px 22px; border-bottom: 1px solid rgba(28,40,53,0.1);">
+          <div style="font-size: 7.5px; letter-spacing: 2.5px; color: rgba(28,40,53,0.4); text-transform: uppercase; margin-bottom: 10px;">Colour System</div>
+          <div style="display: flex; gap: 8px;">
+            <div style="flex: 1;">
+              <div style="height: 28px; background: #f4efe7; border: 1px solid rgba(28,40,53,0.15); border-radius: 3px;"></div>
+              <div style="font-size: 7.5px; color: rgba(28,40,53,0.35); margin-top: 4px; font-family: ui-monospace,monospace;">#F4EFE7</div>
+              <div style="font-size: 7.5px; color: rgba(28,40,53,0.25);">Linen</div>
+            </div>
+            <div style="flex: 1;">
+              <div style="height: 28px; background: #1c2835; border-radius: 3px;"></div>
+              <div style="font-size: 7.5px; color: rgba(28,40,53,0.35); margin-top: 4px; font-family: ui-monospace,monospace;">#1C2835</div>
+              <div style="font-size: 7.5px; color: rgba(28,40,53,0.25);">Slate</div>
+            </div>
+            <div style="flex: 1;">
+              <div style="height: 28px; background: #a08850; border-radius: 3px;"></div>
+              <div style="font-size: 7.5px; color: rgba(28,40,53,0.35); margin-top: 4px; font-family: ui-monospace,monospace;">#A08850</div>
+              <div style="font-size: 7.5px; color: rgba(28,40,53,0.25);">Gold</div>
+            </div>
+            <div style="flex: 1;">
+              <div style="height: 28px; background: #2d4a3e; border-radius: 3px;"></div>
+              <div style="font-size: 7.5px; color: rgba(28,40,53,0.35); margin-top: 4px; font-family: ui-monospace,monospace;">#2D4A3E</div>
+              <div style="font-size: 7.5px; color: rgba(28,40,53,0.25);">Pine</div>
+            </div>
+            <div style="flex: 1;">
+              <div style="height: 28px; background: #8a9a8c; border-radius: 3px;"></div>
+              <div style="font-size: 7.5px; color: rgba(28,40,53,0.35); margin-top: 4px; font-family: ui-monospace,monospace;">#8A9A8C</div>
+              <div style="font-size: 7.5px; color: rgba(28,40,53,0.25);">Sage</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Typography -->
+        <div style="padding: 16px 22px; border-bottom: 1px solid rgba(28,40,53,0.1);">
+          <div style="font-size: 7.5px; letter-spacing: 2.5px; color: rgba(28,40,53,0.4); text-transform: uppercase; margin-bottom: 10px;">Typography — Playfair Display + DM Sans</div>
+          <div style="font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 400; color: #1c2835; line-height: 1.1;">Racing for Sweden</div>
+          <div style="font-size: 10px; color: rgba(28,40,53,0.45); letter-spacing: 0.3px; font-style: italic; font-family: 'Playfair Display',serif; margin-top: 3px;">Gamla Stan Yacht Club, Stockholm</div>
+          <div style="font-size: 9.5px; color: rgba(28,40,53,0.5); margin-top: 8px; line-height: 1.75; font-weight: 300;">
+            We compete with purpose — representing the finest tradition of Swedish offshore racing. Our crew of eight brings world-class experience to every start line.
+          </div>
+          <div style="display: flex; gap: 14px; margin-top: 10px; align-items: baseline;">
+            <span style="font-family: 'Playfair Display',serif; font-size: 26px; color: #1c2835;">Aa</span>
+            <span style="font-family: 'Playfair Display',serif; font-size: 18px; font-style: italic; color: rgba(28,40,53,0.6);">Aa</span>
+            <span style="font-size: 14px; font-weight: 400; color: rgba(28,40,53,0.5);">Aa</span>
+            <span style="font-size: 8.5px; letter-spacing: 3px; text-transform: uppercase; color: rgba(160,136,80,0.85); font-weight: 500;">Label Style</span>
+          </div>
+        </div>
+
+        <!-- Components -->
+        <div style="padding: 16px 22px;">
+          <div style="font-size: 7.5px; letter-spacing: 2.5px; color: rgba(28,40,53,0.4); text-transform: uppercase; margin-bottom: 12px;">UI Components</div>
+          <div style="display: flex; gap: 10px; margin-bottom: 14px;">
+            <button style="background: #1c2835; color: #f4efe7; border: none; padding: 9px 20px; font-family: 'DM Sans',sans-serif; font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; cursor: pointer; font-weight: 500;">Become a Partner</button>
+            <button style="background: transparent; color: #1c2835; border: 1px solid rgba(28,40,53,0.3); padding: 9px 20px; font-family: 'DM Sans',sans-serif; font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; cursor: pointer;">Learn More</button>
+          </div>
+          <div style="border-top: 2px solid #a08850; padding: 14px; background: rgba(28,40,53,0.04);">
+            <div style="font-size: 7px; letter-spacing: 3px; color: #a08850; text-transform: uppercase; font-weight: 500; margin-bottom: 5px;">Platinum Partner</div>
+            <div style="font-family: 'Playfair Display',serif; font-size: 16px; font-weight: 400; color: #1c2835;">Championship Sponsorship</div>
+            <div style="font-size: 9px; color: rgba(28,40,53,0.4); margin-top: 5px; line-height: 1.7; font-weight: 300;">Visibility across 14 race days · Official partner status · VIP regatta access</div>
+          </div>
+        </div>
+
+      </div><!-- /dv-card 1c -->
+    </div><!-- /dv-opt 1c -->
+
+  </div><!-- /dv-opts -->
+  <p class="dv-next">Try next: "build out <a class="dv-oid" href="#1a">1a</a> as a full sponsor page" · "mix the typography of <a class="dv-oid" href="#1b">1b</a> with the palette of <a class="dv-oid" href="#1c">1c</a>" · "add a Swedish flag / burgee element to <a class="dv-oid" href="#1a">1a</a>"</p>
+</section>
+</x-dc>
+</body>
+</html>

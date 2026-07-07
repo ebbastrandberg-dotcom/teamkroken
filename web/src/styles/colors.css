@@ -1,0 +1,87 @@
+/**
+ * Team Kroken design tokens
+ *
+ * 3a — Cobalt + Sail (default)
+ * 3b — Silver Sea
+ */
+
+@theme {
+  --color-bg: var(--color-bg);
+  --color-accent: var(--color-accent);
+  --color-brass: var(--color-brass);
+  --color-sail: var(--color-sail);
+  --color-spray: var(--color-spray);
+  --color-nav-muted: var(--color-nav-muted);
+  --color-text-muted: var(--color-text-muted);
+  --color-text-subtle: var(--color-text-subtle);
+  --color-text-faint: var(--color-text-faint);
+  --color-label-muted: var(--color-label-muted);
+  --color-event-label: var(--color-event-label);
+  --color-border: var(--color-border);
+  --color-border-subtle: var(--color-border-subtle);
+  --color-card-border: var(--color-card-border);
+  --color-ghost-border: var(--color-ghost-border);
+  --color-btn-text: var(--color-btn-text);
+  --font-serif: var(--font-cormorant);
+}
+
+/* ── 3a — Cobalt + Sail ─────────────────────────────────────── */
+
+:root,
+[data-theme="cobalt"] {
+  --palette-navy: #071430;
+  --palette-cobalt: #1a4db8;
+  --palette-brass: #d4aa28;
+  --palette-sail: #f4ecda;
+  --palette-spray: #6aaedc;
+
+  --color-bg: var(--palette-navy);
+  --color-accent: var(--palette-cobalt);
+  --color-brass: var(--palette-brass);
+  --color-sail: var(--palette-sail);
+  --color-spray: var(--palette-spray);
+  --color-nav-muted: rgba(232, 216, 184, 0.4);
+  --color-text-muted: rgba(244, 236, 218, 0.55);
+  --color-text-subtle: rgba(244, 236, 218, 0.65);
+  --color-text-faint: rgba(244, 236, 218, 0.35);
+  --color-label-muted: rgba(200, 168, 75, 0.5);
+  --color-event-label: rgba(200, 168, 75, 0.7);
+  --color-border: rgba(200, 168, 75, 0.2);
+  --color-border-subtle: rgba(200, 168, 75, 0.14);
+  --color-card-border: rgba(212, 170, 40, 0.32);
+  --color-ghost-border: rgba(212, 170, 40, 0.65);
+  --color-hero-shadow: rgba(7, 20, 48, 0.55);
+  --color-hero-overlay-start: rgba(9, 30, 72, 0.38);
+  --color-hero-overlay-end: rgba(9, 30, 72, 0.72);
+  --color-btn-text: var(--palette-navy);
+}
+
+/* ── 3b — Silver Sea ────────────────────────────────────────── */
+
+[data-theme="silver"] {
+  --palette-storm: #141e28;
+  --palette-silver: #b8bcc4;
+  --palette-brass: #c8a84b;
+  --palette-sail: #ece4d4;
+  --palette-spinnaker: #3a5028;
+
+  --color-bg: var(--palette-storm);
+  --color-accent: var(--palette-silver);
+  --color-brass: var(--palette-brass);
+  --color-sail: var(--palette-sail);
+  --color-spray: var(--palette-spinnaker);
+  --color-nav-muted: rgba(220, 210, 190, 0.38);
+  --color-text-muted: rgba(236, 228, 212, 0.38);
+  --color-text-subtle: rgba(236, 228, 212, 0.48);
+  --color-text-faint: rgba(220, 210, 190, 0.22);
+  --color-label-muted: rgba(200, 168, 75, 0.48);
+  --color-event-label: rgba(200, 168, 75, 0.7);
+  --color-border: rgba(200, 168, 75, 0.18);
+  --color-border-subtle: rgba(200, 168, 75, 0.12);
+  --color-card-border: rgba(200, 168, 75, 0.28);
+  --color-ghost-border: rgba(200, 168, 75, 0.55);
+  --color-hero-shadow: rgba(0, 0, 0, 0.5);
+  --color-hero-overlay-start: rgba(20, 30, 40, 0.3);
+  --color-hero-overlay-end: rgba(20, 30, 40, 0.68);
+  --color-btn-text: var(--palette-storm);
+}
