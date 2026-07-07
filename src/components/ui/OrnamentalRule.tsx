@@ -9,7 +9,7 @@ export function OrnamentalRule({ width = 240, className = "" }: OrnamentalRulePr
       width={width}
       height={14}
       viewBox="0 0 240 14"
-      className={className}
+      className={`max-w-[min(240px,80vw)] ${className}`}
       aria-hidden="true"
     >
       <line

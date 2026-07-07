@@ -19,7 +19,7 @@ export const championshipStory = {
 export const teamRacingStory = {
   heading: "What is team racing?",
   body: [
-    "Team racing is a form of sailing in which a team of two boats competes head-to-head against another team. Both teams sail a course; the team whose boat finishes last loses the match. Each team fields eight sailors, with at least two of each gender.",
+    "Team racing is a form of sailing in which a team of two boats competes head-to-head against another team. Both teams sail a course; the team whose boat finishes last loses the match. Each team fields eight sailors, with at least three of each gender.",
     "It is a growing discipline in the sport, driven by its intense, spectator-friendly format — with umpires following every move and delivering rulings directly on the water.",
   ],
 };

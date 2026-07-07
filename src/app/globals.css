@@ -3,10 +3,15 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   background: var(--color-bg);
   color: var(--color-sail);
   font-family: var(--font-cormorant), Georgia, serif;
+  font-size: 16px;
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
 }
