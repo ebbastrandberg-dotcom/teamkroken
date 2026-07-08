@@ -1,3 +1,33 @@
+export const partnerPitch = {
+  heading: "Partner with Team Kroken",
+  subheading: "Represent Sweden at the Team Racing World Championship 2026",
+  bullets: [
+    {
+      title: "Home waters, global stage",
+      body: "Twelve of the world's best teams converge on Stockholm in August 2026 — with broad visibility across sailing and business networks.",
+    },
+    {
+      title: "Proven squad",
+      body: "Four-time Swedish team racing champions, representing Gamla Stan Yacht Club from Beckholmen in central Stockholm.",
+    },
+    {
+      title: "Qualified on merit",
+      body: "Team Kroken secured Sweden's place through Sommarcupen 2026 — now preparing for the world championship on home waters.",
+    },
+    {
+      title: "Partnership opportunity",
+      body: "We are seeking sponsors to fund competition costs and training camps ahead of the regatta — with clear visibility across team kit, events, and media.",
+    },
+  ],
+};
+
+export const partnerBenefits = [
+  "Brand visibility",
+  "Stockholm audience",
+  "World Championship",
+  "GSYS network",
+];
+
 export const teamStory = {
   heading: "About Team Kroken",
   subheading: "Gamla Stan Yacht Club · Beckholmen, Stockholm",
@@ -16,7 +46,7 @@ export const championshipStory = {
   ],
 };
 
-export const teamRacingStory = {
+export const teamRacingFaq = {
   heading: "What is team racing?",
   body: [
     "Team racing is a form of sailing in which a team of two boats competes head-to-head against another team. Both teams sail a course; the team whose boat finishes last loses the match. Each team fields eight sailors, with at least three of each gender.",
@@ -25,4 +55,7 @@ export const teamRacingStory = {
 };
 
 export const sponsorshipStory =
-  "The Swedish team is now seeking sponsors to cover costs directly related to the competition, as well as training camps ahead of the regatta.";
+  "Partner with Team Kroken ahead of the Team Racing World Championship 2026. Sponsorship covers competition costs and training camps — with your brand visible across team kit, events, and media throughout the season.";
+
+export const pressFraming =
+  "Coverage that amplifies partner brands — from qualification to the world championship on home waters.";

@@ -1,10 +1,18 @@
 import { Reveal } from "@/components/motion/Reveal";
-import { Button } from "@/components/ui/Button";
+import { ContactForm } from "@/components/sections/ContactForm";
+import { ButtonLink } from "@/components/ui/ButtonLink";
 import { OrnamentalRule } from "@/components/ui/OrnamentalRule";
 import { Section } from "@/components/ui/Section";
+import {
+  hasSponsorshipDeck,
+  sponsorshipDeckPath,
+  sponsorshipEmail,
+} from "@/lib/contact";
 import { worldChampionship } from "@/lib/event";
 
 export function ContactCta() {
+  const showDeck = hasSponsorshipDeck();
+
   return (
     <Section id="contact" tone="base" className="py-12 sm:py-16">
       <Reveal>
@@ -18,18 +26,26 @@ export function ContactCta() {
           </h2>
           <p className="mt-4 max-w-md text-[16px] leading-[1.65] text-[var(--color-text-muted)]">
             Align your brand with Team Kroken as we prepare for the{" "}
-            {worldChampionship.title}. We welcome conversations with partners who
-            share our commitment to excellence on and off the race course.
+            {worldChampionship.title}. Tell us about your company and we will
+            follow up with partnership details.
           </p>
-          <div className="mt-8 flex w-full max-w-sm flex-col gap-2.5 sm:max-w-none sm:flex-row sm:flex-wrap sm:justify-center">
-            <Button className="w-full sm:w-auto">Contact the Team</Button>
-            <Button variant="secondary" className="w-full sm:w-auto">
-              View Sponsorship Deck
-            </Button>
-          </div>
+          <ContactForm />
+          {showDeck ? (
+            <div className="mt-6">
+              <ButtonLink href={sponsorshipDeckPath} variant="secondary" external>
+                View sponsorship deck
+              </ButtonLink>
+            </div>
+          ) : null}
           <OrnamentalRule className="mt-8" />
           <p className="mt-4 text-[14px] text-[var(--color-text-muted)]">
-            sponsorship@teamkroken.se
+            Or email{" "}
+            <a
+              href={`mailto:${sponsorshipEmail}`}
+              className="text-[var(--color-brass)] transition-opacity hover:opacity-80"
+            >
+              {sponsorshipEmail}
+            </a>
           </p>
         </div>
       </Reveal>

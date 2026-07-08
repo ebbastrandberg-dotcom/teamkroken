@@ -5,22 +5,20 @@ import { type ReactNode } from "react";
 
 type TierCardProps = {
   children: ReactNode;
+  className?: string;
 };
 
-export function TierCard({ children }: TierCardProps) {
+export function TierCard({ children, className = "" }: TierCardProps) {
   const reduceMotion = useReducedMotion();
+  const cardClassName = `glass flex h-full flex-col p-3.5 ${className}`.trim();
 
   if (reduceMotion) {
-    return (
-      <article className="glass p-3.5">
-        {children}
-      </article>
-    );
+    return <article className={cardClassName}>{children}</article>;
   }
 
   return (
     <motion.article
-      className="glass p-3.5"
+      className={cardClassName}
       whileHover={{ y: -2 }}
       transition={{ duration: 0.2, ease: "easeOut" }}
     >

@@ -12,9 +12,9 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Team Kroken — Sponsorship",
+  title: "Team Kroken — Partner with Sweden's TRWC 2026 Team",
   description:
-    `Team Kroken, Gamla Stan Yacht Club — ${worldChampionship.title}. Become a partner.`,
+    `Partner with Team Kroken, Gamla Stan Yacht Club — ${worldChampionship.title}. Sponsorship packages from 15,000 SEK.`,
 };
 
 export const viewport = {

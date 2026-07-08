@@ -1,6 +1,6 @@
 import { Reveal } from "@/components/motion/Reveal";
 import { Section } from "@/components/ui/Section";
-import { seasonEvents } from "@/lib/calendar";
+import { seasonEvents, seasonIntro } from "@/lib/calendar";
 
 export function RaceCalendar() {
   return (
@@ -8,41 +8,48 @@ export function RaceCalendar() {
       <div className="mx-auto max-w-5xl">
         <Reveal>
           <p className="mb-3 text-[11px] tracking-[2.5px] text-[var(--color-brass)] uppercase">
-            Season 2026
+            Road to Stockholm
           </p>
-          <h2 className="mb-10 text-[clamp(24px,6vw,30px)] leading-none font-light tracking-[1px] text-[var(--color-sail)]">
-            Race calendar
+          <h2 className="mb-4 text-[clamp(24px,6vw,30px)] leading-none font-light tracking-[1px] text-[var(--color-sail)]">
+            Season 2026
           </h2>
+          <p className="mb-10 max-w-2xl text-[16px] leading-[1.65] text-[var(--color-text-muted)]">
+            {seasonIntro}
+          </p>
         </Reveal>
         <ul className="divide-y divide-[var(--color-border-subtle)]">
           {seasonEvents.map((event, index) => (
-            <li
-              key={event.name}
-              className="flex flex-col gap-1 py-4 sm:flex-row sm:items-baseline sm:justify-between"
-            >
-              <Reveal delay={index * 0.06} className="flex w-full flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-                <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-6">
-                  <span className="min-w-[88px] text-[12px] tracking-[2px] text-[var(--color-brass)] uppercase">
+            <li key={event.name} className="py-6 first:pt-0 last:pb-0">
+              <Reveal delay={index * 0.06}>
+                <div className="grid gap-3 sm:grid-cols-[120px_1fr] sm:gap-8">
+                  <p className="text-[12px] tracking-[2px] text-[var(--color-brass)] uppercase">
                     {event.date}
-                  </span>
-                  {event.url ? (
-                    <a
-                      href={event.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[clamp(17px,4vw,20px)] tracking-[0.5px] text-[var(--color-sail)] transition-opacity duration-150 hover:opacity-80"
-                    >
-                      {event.name}
-                    </a>
-                  ) : (
-                    <span className="text-[clamp(17px,4vw,20px)] tracking-[0.5px] text-[var(--color-sail)]">
-                      {event.name}
-                    </span>
-                  )}
+                  </p>
+                  <div>
+                    {event.url ? (
+                      <a
+                        href={event.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[clamp(18px,3vw,22px)] tracking-[0.5px] text-[var(--color-sail)] transition-opacity duration-150 hover:opacity-80"
+                      >
+                        {event.name}
+                      </a>
+                    ) : (
+                      <h3 className="text-[clamp(18px,3vw,22px)] tracking-[0.5px] text-[var(--color-sail)]">
+                        {event.name}
+                      </h3>
+                    )}
+                    <p className="mt-1 text-[14px] text-[var(--color-text-muted)]">
+                      {event.location}
+                    </p>
+                    {event.outcome ? (
+                      <p className="mt-3 text-[16px] leading-[1.65] text-[var(--color-text-muted)]">
+                        {event.outcome}
+                      </p>
+                    ) : null}
+                  </div>
                 </div>
-                <span className="text-[14px] text-[var(--color-text-muted)]">
-                  {event.location}
-                </span>
               </Reveal>
             </li>
           ))}

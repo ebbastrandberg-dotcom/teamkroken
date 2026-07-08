@@ -50,9 +50,13 @@ export function TeamGallery() {
       <p className="mb-3 text-[11px] tracking-[2.5px] text-[var(--color-brass)] uppercase">
         On the water
       </p>
-      <h3 className="mb-6 text-[clamp(20px,4vw,24px)] leading-none font-light tracking-[1px] text-[var(--color-sail)]">
-        Racing gallery
+      <h3 className="mb-2 text-[clamp(20px,4vw,24px)] leading-none font-light tracking-[1px] text-[var(--color-sail)]">
+        On the water
       </h3>
+      <p className="mb-6 max-w-2xl text-[15px] leading-[1.65] text-[var(--color-text-muted)]">
+        Partner brands visible alongside Team Kroken at regattas, training, and
+        the road to the World Championship.
+      </p>
 
       <figure className="glass overflow-hidden">
         <div className="relative aspect-[16/9] w-full bg-[var(--color-bg)]">
