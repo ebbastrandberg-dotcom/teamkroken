@@ -5,21 +5,18 @@ import { StaggerWords } from "@/components/motion/StaggerWords";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { OrnamentalRule } from "@/components/ui/OrnamentalRule";
 import { worldChampionship } from "@/lib/event";
-import { themes, useTheme } from "@/providers/ThemeProvider";
+import { heroImage, heroImagePosition } from "@/lib/hero";
 
 export function Hero() {
-  const { theme } = useTheme();
-  const config = themes[theme];
-
   return (
     <section className="relative min-h-[calc(100svh-var(--nav-height))] overflow-hidden">
       <Image
-        src={config.heroImage}
+        src={heroImage}
         alt="Team Kroken racing on the water"
         fill
         priority
         className="object-cover brightness-[1.05] contrast-[1.05]"
-        style={{ objectPosition: config.heroPosition }}
+        style={{ objectPosition: heroImagePosition }}
         sizes="100vw"
       />
       <div

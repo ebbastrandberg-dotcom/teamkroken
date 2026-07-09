@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond } from "next/font/google";
 import { worldChampionship } from "@/lib/event";
-import { ThemeProvider } from "@/providers/ThemeProvider";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -29,10 +28,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="cobalt" className={cormorant.variable}>
-      <body className="min-h-screen antialiased">
-        <ThemeProvider>{children}</ThemeProvider>
-      </body>
+    <html lang="en" className={cormorant.variable}>
+      <body className="min-h-screen antialiased">{children}</body>
     </html>
   );
 }

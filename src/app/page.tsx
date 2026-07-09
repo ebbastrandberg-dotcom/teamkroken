@@ -8,7 +8,6 @@ import { Press } from "@/components/sections/Press";
 import { RaceCalendar } from "@/components/sections/RaceCalendar";
 import { SponsorshipTiers } from "@/components/sections/SponsorshipTiers";
 import { Team } from "@/components/sections/Team";
-import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 
 export default function Home() {
   return (
@@ -25,7 +24,6 @@ export default function Home() {
         <ContactCta />
       </main>
       <Footer />
-      <ThemeSwitcher />
     </>
   );
 }

@@ -65,7 +65,7 @@ export const teamMembers: TeamMember[] = [
     role: "Team Captain · Helmsman",
   },
   { name: "Filippa Larsson", image: "/team/filippa-larsson.jpeg" },
-  { name: "Viktor O", initials: "VO" },
+  { name: "Viktor", initials: "V" },
   { name: "Ebba Strandberg", image: "/team/ebba-strandberg.jpeg" },
   {
     name: "Lukas Bergman",
