@@ -36,12 +36,6 @@ export const teamGalleryPhotos: TeamGalleryPhoto[] = [
     caption: "Team Kroken · Gamla Stan Yacht Club",
   },
   {
-    src: "/team/gallery/racing-stockholm.png",
-    alt: "Team Kroken sailing with the Stockholm skyline behind",
-    caption: "Team Kroken · Riddarfjärden",
-    fit: "contain",
-  },
-  {
     src: "/team/gallery/racing-crew-four.png",
     alt: "Team Kroken crew racing for Gamla Stan Yacht Club",
     caption: "Team Kroken · Gamla Stan Yacht Club",
