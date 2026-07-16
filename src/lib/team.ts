@@ -12,7 +12,7 @@ export type TeamGalleryPhoto = {
   fit?: "cover" | "contain";
 };
 
-export const teamGroupPhoto = "/team/team-group.png";
+export const teamGroupPhoto = "/team/team-group-sommarcupen.png";
 
 export const teamGalleryPhotos: TeamGalleryPhoto[] = [
   {

@@ -1,20 +1,21 @@
 import Image from "next/image";
 import { Reveal } from "@/components/motion/Reveal";
-import { TeamGallery } from "@/components/sections/TeamGallery";
 import { Section } from "@/components/ui/Section";
-import { teamGroupPhoto, teamMembers } from "@/lib/team";
+import { teamMembers } from "@/lib/team";
 
 function MemberPhoto({
   name,
   image,
   initials,
   grayscale = true,
+  quality = 75,
   sizes = "(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw",
 }: {
   name: string;
   image?: string;
   initials?: string;
   grayscale?: boolean;
+  quality?: number;
   sizes?: string;
 }) {
   if (image) {
@@ -23,7 +24,8 @@ function MemberPhoto({
         src={image}
         alt={name}
         fill
-        className={`object-cover brightness-[1.05] contrast-[1.05] ${grayscale ? "grayscale" : ""}`}
+        quality={quality}
+        className={`object-cover ${grayscale ? "grayscale brightness-[1.05] contrast-[1.05]" : "contrast-[1.06]"}`}
         sizes={sizes}
       />
     );
@@ -49,22 +51,6 @@ export function Team() {
           <h2 className="mb-10 text-[clamp(24px,6vw,30px)] leading-none font-light tracking-[1px] text-[var(--color-sail)]">
             Meet the team
           </h2>
-        </Reveal>
-
-        <Reveal delay={0.08}>
-          <figure className="glass mb-10 overflow-hidden">
-            <div className="relative aspect-[16/9] w-full">
-              <MemberPhoto
-                name="Team Kroken celebrating with trophy"
-                image={teamGroupPhoto}
-                grayscale={false}
-                sizes="(max-width: 1024px) 100vw, 1024px"
-              />
-            </div>
-            <figcaption className="px-3.5 py-3 text-center text-[11px] leading-[1.6] tracking-[1.5px] text-[var(--color-text-muted)] uppercase sm:text-[13px] sm:tracking-[2px]">
-              Team Kroken · Gamla Stan Yacht Club · Sommarcupen May 2026
-            </figcaption>
-          </figure>
         </Reveal>
 
         <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
@@ -98,10 +84,6 @@ export function Team() {
             </Reveal>
           ))}
         </div>
-
-        <Reveal delay={0.1}>
-          <TeamGallery />
-        </Reveal>
       </div>
     </Section>
   );

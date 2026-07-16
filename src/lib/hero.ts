@@ -1,2 +1,2 @@
-export const heroImage = "/images/hero-cobalt-regatta.png";
-export const heroImagePosition = "center 45%";
+export const heroImage = "/team/gallery/trwc-racing-fleet.png";
+export const heroImagePosition = "center 40%";

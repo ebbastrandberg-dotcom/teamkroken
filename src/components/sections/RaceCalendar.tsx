@@ -4,7 +4,7 @@ import { seasonEvents, seasonIntro } from "@/lib/calendar";
 
 export function RaceCalendar() {
   return (
-    <Section id="calendar" tone="muted">
+    <Section id="calendar" tone="base">
       <div className="mx-auto max-w-5xl">
         <Reveal>
           <p className="mb-3 text-[11px] tracking-[2.5px] text-[var(--color-brass)] uppercase">

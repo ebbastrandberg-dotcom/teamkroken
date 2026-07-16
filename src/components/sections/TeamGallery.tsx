@@ -41,7 +41,6 @@ export function TeamGallery() {
 
   return (
     <div
-      className="mt-14"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onFocus={() => setPaused(true)}
@@ -50,9 +49,9 @@ export function TeamGallery() {
       <p className="mb-3 text-[11px] tracking-[2.5px] text-[var(--color-brass)] uppercase">
         On the water
       </p>
-      <h3 className="mb-2 text-[clamp(20px,4vw,24px)] leading-none font-light tracking-[1px] text-[var(--color-sail)]">
+      <h2 className="mb-2 text-[clamp(24px,6vw,30px)] leading-none font-light tracking-[1px] text-[var(--color-sail)]">
         On the water
-      </h3>
+      </h2>
       <p className="mb-6 max-w-2xl text-[15px] leading-[1.65] text-[var(--color-text-muted)]">
         Partner brands visible alongside Team Kroken at regattas, training, and
         the road to the World Championship.

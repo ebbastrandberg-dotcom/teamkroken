@@ -7,10 +7,10 @@ import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Section } from "@/components/ui/Section";
 import {
   partnerBenefits,
+  partnerPitch,
   sponsorshipStory,
   teamRacingFaq,
 } from "@/lib/content";
-import { worldChampionship } from "@/lib/event";
 import { sponsorshipTiers } from "@/lib/sponsorship";
 
 function TeamRacingFaq() {
@@ -51,21 +51,21 @@ export function SponsorshipTiers() {
       <div className="mx-auto max-w-5xl">
         <Reveal>
           <p className="mb-3 text-[11px] tracking-[2.5px] text-[var(--color-brass)] uppercase">
-            Partnership packages
+            Partnership
           </p>
-          <h2 className="mb-3 text-[clamp(24px,6vw,30px)] leading-none font-light tracking-[1px] text-[var(--color-sail)]">
-            Sponsorship packages
+          <h2 className="text-[clamp(24px,6vw,30px)] leading-none font-light tracking-[1px] text-[var(--color-sail)]">
+            {partnerPitch.heading}
           </h2>
-          <p className="mb-4 max-w-2xl text-[16px] leading-[1.65] text-[var(--color-text-muted)]">
-            Partner with Team Kroken ahead of the {worldChampionship.title}.
+          <p className="mt-2 text-[15px] tracking-[0.5px] text-[var(--color-text-subtle)] italic">
+            {partnerPitch.subheading}
           </p>
-          <p className="mb-8 max-w-2xl text-[16px] leading-[1.65] text-[var(--color-text-muted)]">
+          <p className="mt-6 max-w-2xl text-[16px] leading-[1.65] text-[var(--color-text-muted)]">
             {sponsorshipStory}
           </p>
         </Reveal>
 
-        <Reveal delay={0.06}>
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <Reveal delay={0.08}>
+          <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
             {partnerBenefits.map((benefit) => (
               <div
                 key={benefit}
@@ -82,38 +82,36 @@ export function SponsorshipTiers() {
             <Reveal key={tier.tier} delay={index * 0.08} className="h-full">
               <TierCard>
                 <div className="flex h-full flex-col">
-                  <div className="flex flex-col">
-                    <p
-                      className={`mb-2 min-h-[15px] text-[10px] tracking-[3px] uppercase ${
-                        tier.featured
-                          ? "text-[var(--color-brass)]"
-                          : "text-transparent select-none"
-                      }`}
-                      aria-hidden={!tier.featured}
-                    >
-                      Most popular
-                    </p>
-                    <p className="min-h-[15px] text-[10px] tracking-[3px] text-[var(--color-brass)] uppercase">
-                      {tier.tier}
-                    </p>
-                    <h3 className="mt-1 min-h-[28px] text-[20px] leading-[1.2] tracking-[0.5px] text-[var(--color-sail)]">
-                      {tier.title}
-                    </h3>
-                    <p className="mt-2 min-h-[23px] text-[15px] tracking-[0.5px] text-[var(--color-brass)]">
-                      {tier.price}
-                    </p>
-                    <p className="mt-2 min-h-[68px] text-[14px] leading-[1.6] text-[var(--color-text-muted)]">
-                      {tier.benefit}
-                    </p>
-                    <p className="mt-3 min-h-[38px] text-[12px] leading-[1.5] tracking-[1px] text-[var(--color-text-subtle)] italic">
-                      {tier.bestFor}
-                    </p>
-                  </div>
-                  <ul className="mt-4 flex-1 space-y-2 border-t border-[var(--color-border-subtle)] pt-4">
+                  <p
+                    className={`mb-1.5 min-h-[15px] text-[10px] tracking-[3px] uppercase ${
+                      tier.featured
+                        ? "text-[var(--color-brass)]"
+                        : "text-transparent select-none"
+                    }`}
+                    aria-hidden={!tier.featured}
+                  >
+                    Most popular
+                  </p>
+                  <p className="text-[10px] tracking-[3px] text-[var(--color-brass)] uppercase">
+                    {tier.tier}
+                  </p>
+                  <h3 className="mt-1 min-h-[24px] text-[20px] leading-[1.2] tracking-[0.5px] text-[var(--color-sail)]">
+                    {tier.title}
+                  </h3>
+                  <p className="mt-1.5 text-[15px] tracking-[0.5px] text-[var(--color-brass)]">
+                    {tier.price}
+                  </p>
+                  <p className="mt-2 min-h-[45px] text-[14px] leading-[1.5] text-[var(--color-text-muted)]">
+                    {tier.benefit}
+                  </p>
+                  <p className="mt-2 min-h-[18px] text-[12px] leading-[1.5] tracking-[1px] text-[var(--color-text-subtle)] italic">
+                    {tier.bestFor}
+                  </p>
+                  <ul className="mt-3 min-h-[92px] space-y-1.5 border-t border-[var(--color-border-subtle)] pt-3">
                     {tier.deliverables.map((item) => (
                       <li
                         key={item}
-                        className="text-[13px] leading-[1.5] text-[var(--color-text-muted)]"
+                        className="text-[13px] leading-[1.45] text-[var(--color-text-muted)]"
                       >
                         {item}
                       </li>
