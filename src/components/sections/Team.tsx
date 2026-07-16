@@ -42,7 +42,7 @@ function MemberPhoto({
 
 export function Team() {
   return (
-    <Section id="team" tone="base">
+    <Section id="team" tone="muted">
       <div className="mx-auto max-w-5xl">
         <Reveal>
           <p className="mb-3 text-[11px] tracking-[2.5px] text-[var(--color-brass)] uppercase">

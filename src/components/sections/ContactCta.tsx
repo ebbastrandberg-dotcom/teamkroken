@@ -14,7 +14,7 @@ export function ContactCta() {
   const showDeck = hasSponsorshipDeck();
 
   return (
-    <Section id="contact" tone="base" className="py-12 sm:py-16">
+    <Section id="contact" tone="muted" className="py-12 sm:py-16">
       <Reveal>
         <div className="glass mx-auto flex max-w-2xl flex-col items-center p-8 text-center sm:p-10">
           <OrnamentalRule className="mb-4" />

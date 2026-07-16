@@ -5,7 +5,7 @@ import { pressItems } from "@/lib/press";
 
 export function Press() {
   return (
-    <Section id="press" tone="muted">
+    <Section id="press" tone="base">
       <div className="mx-auto max-w-5xl">
         <Reveal>
           <p className="mb-3 text-[11px] tracking-[2.5px] text-[var(--color-brass)] uppercase">
